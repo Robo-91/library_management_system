@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1340
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Library_App_Integration", "Library_App_Integration\Library_App_Integration.dtproj", "{7975924D-6E57-4BB6-8C39-ED30D2FD80E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7975924D-6E57-4BB6-8C39-ED30D2FD80E3}.Development|Default.ActiveCfg = Development
+		{7975924D-6E57-4BB6-8C39-ED30D2FD80E3}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82232C54-B291-408C-89EF-D7D761D72A9A}
+	EndGlobalSection
+EndGlobal
