@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Library_App_Integration</Name>
-    <LastWriteTime>2021-04-02T16:22:11.3923113Z</LastWriteTime>
+    <LastWriteTime>2021-04-20T20:23:51.1075574Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Books_pkg.dtsx</Name>
-      <LastWriteTime>2021-04-02T16:39:23.7373468Z</LastWriteTime>
+      <LastWriteTime>2021-04-20T20:32:54.6219879Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
