@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Library_App_Integration</Name>
-    <LastWriteTime>2021-04-20T20:23:51.1075574Z</LastWriteTime>
+    <LastWriteTime>2021-04-21T20:35:08.7783279Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Main_Flow.dtsx</Name>
-      <LastWriteTime>2021-04-02T16:16:29.4683802Z</LastWriteTime>
+      <LastWriteTime>2021-04-21T20:35:03.7248921Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -19,6 +19,11 @@
     <ProjectBuildItemInfo>
       <Name>Books_pkg.dtsx</Name>
       <LastWriteTime>2021-04-20T20:32:54.6219879Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Members_pkg.dtsx</Name>
+      <LastWriteTime>2021-04-21T20:32:47.7032461Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
