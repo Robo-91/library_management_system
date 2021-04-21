@@ -11,6 +11,14 @@ select top 25 percent
 	group by author_name
 	order by [Number of Books] desc,
 	  [Average Rating] desc
-	go
+go
 
-
+-- View that shows total members with each membership type
+create view v_Memberships
+as
+select member_type as [Membership Type], 
+  count(*) as [Total Members] 
+	from tbl_MembershipType
+	join tbl_Members on tbl_MembershipType.id = tbl_Members.membership_id
+	group by member_type
+go
