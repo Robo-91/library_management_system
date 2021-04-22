@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main_Flow"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{9394A6F0-722C-431E-8C9F-CB9DEA52A9E5}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{C337558E-9AE0-4ABB-A7B5-CFAC9AE36CEB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -107,6 +107,10 @@
           Size="144,42"
           Id="Package\Book Package"
           TopLeft="187,256" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Member Package"
+          TopLeft="199,23" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="256.25,154">
@@ -129,36 +133,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Member Package"
-          TopLeft="425,28" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="504.5,70">
+          TopLeft="278.5,65">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-251,42"
+              EndConnector="-25,47"
               Start="0,0"
-              End="-251,34.5">
+              End="-25,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
+                    End="0,19.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="-4,21" />
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="-4,23.5" />
                   <mssgle:LineSegment
-                    End="-247,21" />
+                    End="-21,23.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-247,21"
-                    Point2="-251,21"
-                    Point3="-251,25" />
+                    Point1="-21,23.5"
+                    Point2="-25,23.5"
+                    Point3="-25,27.5" />
                   <mssgle:LineSegment
-                    End="-251,34.5" />
+                    End="-25,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
