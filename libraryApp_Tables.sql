@@ -56,3 +56,10 @@ create table tbl_Fine
 	member_id int foreign key references tbl_Members(id),
 	total_charge decimal(10,2)
 );
+
+create table tbl_Overdue
+(
+	id int identity primary key,
+	member_id int foreign key references tbl_Members(id),
+	days_overdue int
+);
