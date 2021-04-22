@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main_Flow"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{9394A6F0-722C-431E-8C9F-CB9DEA52A9E5}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{B7247437-25EC-4826-A6A4-C1C39B388A3C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -52,6 +52,23 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Books Issued Package"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{1CD03FFA-C4AE-42AB-82DD-FF82DC899A9D}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Books Issued Package"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>IssuedBooks_pkg.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Member Package"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
@@ -86,6 +103,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Author Package" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{DC3F9C28-831A-435A-9B56-F3BB8862DA19}"
+      DTS:From="Package\Book Package"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Books Issued Package" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -106,21 +131,71 @@
         <NodeLayout
           Size="144,42"
           Id="Package\Book Package"
-          TopLeft="187,256" />
+          TopLeft="194,200" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Member Package"
+          TopLeft="199,23" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="256.25,154">
+          TopLeft="253.5,154">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,102"
+              EndConnector="12.5,46"
               Start="0,0"
-              End="0,94.5">
+              End="12.5,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,94.5" />
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="8.5,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,23"
+                    Point2="12.5,23"
+                    Point3="12.5,27" />
+                  <mssgle:LineSegment
+                    End="12.5,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="278.5,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25,47"
+              Start="0,0"
+              End="-25,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="-4,23.5" />
+                  <mssgle:LineSegment
+                    End="-21,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21,23.5"
+                    Point2="-25,23.5"
+                    Point3="-25,27.5" />
+                  <mssgle:LineSegment
+                    End="-25,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -130,35 +205,35 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="159,42"
-          Id="Package\Member Package"
-          TopLeft="425,28" />
+          Size="183,42"
+          Id="Package\Books Issued Package"
+          TopLeft="207,311" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="504.5,70">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="266,242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-251,42"
+              EndConnector="32.5,69"
               Start="0,0"
-              End="-251,34.5">
+              End="32.5,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
+                    End="0,30.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="-4,21" />
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
                   <mssgle:LineSegment
-                    End="-247,21" />
+                    End="28.5,34.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-247,21"
-                    Point2="-251,21"
-                    Point3="-251,25" />
+                    Point1="28.5,34.5"
+                    Point2="32.5,34.5"
+                    Point3="32.5,38.5" />
                   <mssgle:LineSegment
-                    End="-251,34.5" />
+                    End="32.5,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
