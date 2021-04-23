@@ -14,10 +14,10 @@ as
 	where DATEDIFF(day,date_issued,date_returned) > day_length
 )
 
--- Use records from cte to insert into overdue table
-insert into tbl_Overdue(member_id,days_overdue)
+-- Use records from CTE to insert into overdue table with a rate of .30/day
+insert into tbl_Overdue(member_id,days_overdue,total_charge)
 select cte_MemberId, 
-	cte_DaysIssued - cte_Membershiplength as [Days Overdue]
+	cte_DaysIssued - cte_Membershiplength as [Days Overdue],
+	(cte_DaysIssued - cte_Membershiplength) * .30
 	from cte_DaysIssued;
 
-	select * from tbl_Overdue
