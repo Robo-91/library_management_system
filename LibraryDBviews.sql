@@ -22,3 +22,12 @@ select member_type as [Membership Type],
 	join tbl_Members on tbl_MembershipType.id = tbl_Members.membership_id
 	group by member_type
 go
+
+-- View that shows each member with Overdue
+create view v_Overdue
+as
+select	concat(first_name,' ',last_name) as [Full Name],
+		days_overdue as [Days Overdue],
+		total_charge as [Total Overdue Charge]
+	from tbl_Members
+	join tbl_Overdue on tbl_Members.id = tbl_Overdue.member_id
