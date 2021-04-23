@@ -31,3 +31,29 @@ select	concat(first_name,' ',last_name) as [Full Name],
 		total_charge as [Total Overdue Charge]
 	from tbl_Members
 	join tbl_Overdue on tbl_Members.id = tbl_Overdue.member_id
+go
+
+-- View that shows total charge overtime for each member
+create view v_TotalCharge
+as
+select  concat(first_name,' ',last_name) as [Full Name],
+		sum(total_charge) as [Total Charge]
+	from tbl_Members
+	join tbl_Overdue on tbl_Members.id = tbl_Overdue.member_id
+	group by first_name,last_name
+go
+
+-- View that shows issued books w/rating
+create view v_IssuedBooksRatings
+as
+select top 15 percent	
+		title as [Book Title],
+		average_rating as [Average Rating],
+		count(*) as [Number of Issues]
+	from tbl_Books
+	join tbl_BooksIssued
+	on tbl_Books.id = tbl_BooksIssued.book_id
+	group by title,average_rating
+	order by [Number of Issues] desc,
+			 average_rating desc
+go
