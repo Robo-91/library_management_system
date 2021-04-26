@@ -70,21 +70,49 @@ create procedure proc_Checkout
 )
 as
 begin
-	declare @BookId int = (select id from tbl_Books
-	where isbn = @IsbnNumber)
-	if @BookId is null
-		begin
-			print 'Book with specified isbn not found'
-		end
-	else
-		begin
-			insert into tbl_BooksIssued(book_id,member_id,date_issued,date_returned)
-			values(@BookId,@Member_id,getdate(),null)
-		end
+	begin try
+		declare @BookId int = (select id from tbl_Books
+		where isbn = @IsbnNumber)
+		if @BookId is null
+			begin
+				print 'Book with specified isbn not found'
+			end
+		else
+			begin
+				insert into tbl_BooksIssued(book_id,member_id,date_issued,date_returned)
+				values(@BookId,@Member_id,getdate(),null)
+			end
+	end try
+	begin catch
+		print 'Unable to Checkout book'
+	end catch
 end
 go
 
 -- Procedure for returning a book
+create procedure proc_ReturnBook
+(
+	@BookId int,
+	@MemberId int
+)
+as
+begin
+	begin try
+		if @BookId is null OR @MemberId is null
+			begin
+				print 'Please insert both the Book and Member Ids'
+			end
+		else
+			begin
+				update tbl_BooksIssued set date_returned = getdate()
+				where id = (select id from tbl_BooksIssued where book_id = @BookId and member_id = @MemberId and date_returned is null)
+			end
+	end try
+	begin catch
+		Print 'Unable to return book'
+	end catch
+end
+go
 
 -- Procedure for Accumulating a fine
 
