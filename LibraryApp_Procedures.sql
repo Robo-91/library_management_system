@@ -115,8 +115,26 @@ end
 go
 
 -- Procedure for Accumulating a fine
+create procedure proc_Fine
+()
+as
+begin
+end
+go
 
 -- Procedure for CRUD operations - Book
+create procedure proc_Book
+()
+as
+begin
+end
+go
 
 -- Procedure for CRUD operations - Author
+create procedure proc_Author
+()
+as
+begin
+end
+go
  
