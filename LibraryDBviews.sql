@@ -13,6 +13,17 @@ select top 25 percent
 	  [Average Rating] desc
 go
 
+-- View that Displays publishers and number of books
+create view v_Publisher_Books
+as
+	select top 30 percent
+			publisher as [Publisher],
+			count(title) as [Number of Books]
+				from tbl_Books
+			group by publisher
+			order by [Number of Books] desc
+go
+
 -- View that shows total members with each membership type
 create view v_Memberships
 as
