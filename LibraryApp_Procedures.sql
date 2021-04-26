@@ -63,6 +63,26 @@ end
 go
 
 -- Procedure for checking out a book
+create procedure proc_Checkout
+(
+	@IsbnNumber varchar(20),
+	@Member_id int
+)
+as
+begin
+	declare @BookId int = (select id from tbl_Books
+	where isbn = @IsbnNumber)
+	if @BookId is null
+		begin
+			print 'Book with specified isbn not found'
+		end
+	else
+		begin
+			insert into tbl_BooksIssued(book_id,member_id,date_issued,date_returned)
+			values(@BookId,@Member_id,getdate(),null)
+		end
+end
+go
 
 -- Procedure for returning a book
 
@@ -71,3 +91,4 @@ go
 -- Procedure for CRUD operations - Book
 
 -- Procedure for CRUD operations - Author
+ 
