@@ -62,4 +62,12 @@ begin
 end
 go
 
--- Procedure for CRUD operations - Authors
+-- Procedure for checking out a book
+
+-- Procedure for returning a book
+
+-- Procedure for Accumulating a fine
+
+-- Procedure for CRUD operations - Book
+
+-- Procedure for CRUD operations - Author
