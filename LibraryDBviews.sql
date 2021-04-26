@@ -68,3 +68,21 @@ select top 15 percent
 	order by [Number of Issues] desc,
 			 average_rating desc
 go
+
+-- View that returns books with aliases
+create view v_BookInfo
+as
+	select top 100 percent
+			title as [Book Title],
+			author_name as [Author],
+			num_pages as [Number of Pages],
+			isbn as [ISBN],
+			isbn13 as [ISBN-13],
+			average_rating as [Rating],
+			ratings_count as [Ratings Count],
+			publisher as [Publisher]
+				from tbl_Books
+			join tbl_Authors on
+			tbl_Books.author_id = tbl_Authors.id
+			order by [Book Title],[Author],[Number of Pages],[Rating]
+go
