@@ -114,15 +114,43 @@ begin
 end
 go
 
--- Procedure for CRUD operations - Book
+-- Procedure to create new Book
 create procedure proc_Book
-()
+(
+	@BookTitle varchar(50),
+	@AuthorID int,
+	@AvgRating decimal(4,2),
+	@isbn varchar(20),
+	@isbn13 varchar(20),
+	@Pages int,
+	@RtgCount int,
+	@txtRvwCount int,
+	@PubDate date,
+	@Publisher varchar(255)
+)
 as
 begin
+	declare @NewBookId int = (select top 1 id from tbl_Books
+		order by id desc) + 1
+	declare @BookExists int =
+		(select count(*) from tbl_Books
+		where title like '%' + @BookTitle + '%')
+	if @BookExists <> 0
+		begin
+			Print 'A record already exists that contains specified title'
+		end
+	else
+		begin
+			insert into tbl_Books(id,title,author_id,average_rating,isbn,isbn13,num_pages,
+			ratings_count,text_reviews_count,publication_date,publisher)
+			values
+			(@NewBookId,@BookTitle,@AuthorID,@AvgRating,@isbn,@isbn13,@Pages,@RtgCount,@txtRvwCount,
+			@PubDate,@Publisher)
+		end
 end
 go
 
--- Procedure for CRUD operations - Author
+-- Procedure to create new Author
 create procedure proc_Author
 (
 	@AuthorName varchar(50)
