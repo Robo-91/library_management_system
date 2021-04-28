@@ -114,14 +114,6 @@ begin
 end
 go
 
--- Procedure for Accumulating a fine
-create procedure proc_Fine
-()
-as
-begin
-end
-go
-
 -- Procedure for CRUD operations - Book
 create procedure proc_Book
 ()
@@ -132,9 +124,23 @@ go
 
 -- Procedure for CRUD operations - Author
 create procedure proc_Author
-()
+(
+	@AuthorName varchar(50)
+)
 as
 begin
+	declare @Results int = 
+		(select count(*) from tbl_Authors 
+		 where author_name like '%' + @AuthorName + '%')
+
+	if @Results <> 0
+		begin
+			Print 'A record that contains that name already exists'
+		end
+	else
+		begin
+			insert into tbl_Authors(author_name)
+			values(@AuthorName)
+		end
 end
 go
- 
