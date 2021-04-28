@@ -50,13 +50,6 @@ create table tbl_BooksIssued
 	date_issued datetime default getdate()
 );
 
-create table tbl_Fine
-(
-	id int identity primary key,
-	member_id int foreign key references tbl_Members(id),
-	total_charge decimal(10,2)
-);
-
 create table tbl_Overdue
 (
 	id int identity primary key,
