@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\BookDataset.txt">
+      DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Data Files\BookDataset.txt">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -20,7 +20,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="bookID"
-          DTS:DTSID="{3C0AC400-1D55-4B89-8FD2-ADE6AA2C0DE4}"
+          DTS:DTSID="{08A1B1D9-2549-440A-AC47-C1569CF51044}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -29,7 +29,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="title"
-          DTS:DTSID="{CF60F4A8-C1E1-4272-953B-FCAEF11897A5}"
+          DTS:DTSID="{708FB068-5234-4D99-9050-D55F67B1DC15}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="authors"
-          DTS:DTSID="{205644F0-28A1-4EE1-82EB-A59614A27A98}"
+          DTS:DTSID="{EA1A2229-1199-48B6-9C09-08CFEBB40674}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
           DTS:DataType="14"
           DTS:TextQualified="True"
           DTS:ObjectName="average_rating"
-          DTS:DTSID="{A36B2F0D-E43C-4B63-A037-1B93371375CD}"
+          DTS:DTSID="{9DE58AB3-A3FD-4B6B-8970-068703CCE434}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="isbn"
-          DTS:DTSID="{D4E7B204-CB65-4939-B887-2425DDD25022}"
+          DTS:DTSID="{E36E73FF-D802-41C7-BCD2-762EAC5C3D45}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -64,7 +64,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="isbn13"
-          DTS:DTSID="{79E140D5-D92D-4AC3-8321-5677624BEDD0}"
+          DTS:DTSID="{1EFECAE1-162D-4A1B-9D01-30A1EA7A710E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -73,7 +73,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="language_code"
-          DTS:DTSID="{E385CC08-BE09-4016-912A-57AE86C900E7}"
+          DTS:DTSID="{AC1E9395-7782-4A8D-8B16-B6F2123C9881}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
           DTS:DataType="16"
           DTS:TextQualified="True"
           DTS:ObjectName="num_pages"
-          DTS:DTSID="{77BA7F64-3409-4E95-A7A4-F86C2B80BD57}"
+          DTS:DTSID="{D31FA909-3065-4D54-8D11-68A6C34ED387}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -89,7 +89,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="ratings_count"
-          DTS:DTSID="{F3E748D4-FF04-487F-9A2D-DBD7C3810FEC}"
+          DTS:DTSID="{5F8BC2D9-7BD0-4197-B59A-74AE86399BB0}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -97,7 +97,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="text_reviews_count"
-          DTS:DTSID="{756C5356-F1A4-4029-B5AF-77889A16964A}"
+          DTS:DTSID="{4569F3B7-1A77-4786-AFD7-2D9D47BE6B32}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -105,7 +105,7 @@
           DTS:DataType="7"
           DTS:TextQualified="True"
           DTS:ObjectName="publication_date"
-          DTS:DTSID="{C30E0471-661A-42D2-8205-91CA647BC550}"
+          DTS:DTSID="{754C2CE1-305A-44DB-BDB3-7C6CB2499C1D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -114,7 +114,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="publisher"
-          DTS:DTSID="{B53E3C0F-3370-4887-81EF-44B9460B897E}"
+          DTS:DTSID="{5837B876-9D6B-4708-926B-3AD0764BA2FF}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

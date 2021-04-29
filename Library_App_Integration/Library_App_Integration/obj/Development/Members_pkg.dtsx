@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Members_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{DB138206-F67B-4C1C-B152-6CE6952C1A87}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{72CCBCA0-A864-4077-855A-BB857BFA7E16}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\MemberDataConError.txt">
+          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Outputs\MemberDataConError.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="first_name"
-              DTS:DTSID="{2B250413-7D41-4801-B25C-90955A3E80BF}"
+              DTS:DTSID="{A6280A77-C3E4-4AD3-8E4C-CE90F5F4A657}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="last_name"
-              DTS:DTSID="{071FFCE8-3361-4029-8003-6399CDC1F6FF}"
+              DTS:DTSID="{F7B6E12F-ABC7-4339-8C94-9A2A684D2E71}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="membership_id"
-              DTS:DTSID="{DFC440CB-D58B-42A8-AE48-B78FEDFE4D1D}"
+              DTS:DTSID="{24367789-9E1F-4697-B2EC-210BC49038CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{BB2CE4CC-C3C3-41C4-8D51-43C012D5D42B}"
+              DTS:DTSID="{FD3472D2-4202-4ED1-AF04-5DF307F0D9BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +71,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{63953563-E4DC-4A1A-AED8-5E57757D9528}"
+              DTS:DTSID="{87452087-D965-4F5B-95FA-710DF7D7743E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -84,7 +84,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\r91pa\Desktop\library_management_system\Rand_Names.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\r91pa\Desktop\library_management_system\Data Files\Rand_Names.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -809,113 +809,21 @@ where [refTable].[first_name] = ? and [refTable].[last_name] = ?</property>
           Id="Package\Load Members\Excel Source"
           TopLeft="130,40" />
         <NodeLayout
-          Size="210,42"
-          Id="Package\Load Members\Convert Unicode Characters"
-          TopLeft="78,130" />
-        <EdgeLayout
-          Id="Package\Load Members.Paths[Excel Source Output]"
-          TopLeft="199.5,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.5,48"
-              Start="0,0"
-              End="-16.5,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="-4,24" />
-                  <mssgle:LineSegment
-                    End="-12.5,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.5,24"
-                    Point2="-16.5,24"
-                    Point3="-16.5,28" />
-                  <mssgle:LineSegment
-                    End="-16.5,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Load Members\Lookup"
-          TopLeft="132,215" />
-        <EdgeLayout
-          Id="Package\Load Members.Paths[Data Conversion Output]"
-          TopLeft="185.75,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="171,42"
           Id="Package\Load Members\OLE DB Destination"
           TopLeft="170,333" />
-        <EdgeLayout
-          Id="Package\Load Members.Paths[Lookup No Match Output]"
-          TopLeft="188.5,257">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="67,76"
-              Start="0,0"
-              End="67,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34"
-                    Point2="0,38"
-                    Point3="4,38" />
-                  <mssgle:LineSegment
-                    End="63,38" />
-                  <mssgle:CubicBezierSegment
-                    Point1="63,38"
-                    Point2="67,38"
-                    Point3="67,42" />
-                  <mssgle:LineSegment
-                    End="67,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-22.30638671875,43,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="172,42"
           Id="Package\Load Members\Flat File Destination"
           TopLeft="322,159" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Load Members\Lookup"
+          TopLeft="132,215" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Load Members\Convert Unicode Characters"
+          TopLeft="78,130" />
         <EdgeLayout
           Id="Package\Load Members.Paths[Data Conversion Error Output]"
           TopLeft="288,151">
@@ -952,9 +860,124 @@ where [refTable].[first_name] = ? and [refTable].[last_name] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Members.Paths[Lookup No Match Output]"
+          TopLeft="188.5,257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67,76"
+              Start="0,0"
+              End="67,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="4,38" />
+                  <mssgle:LineSegment
+                    End="63,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="63,38"
+                    Point2="67,38"
+                    Point3="67,42" />
+                  <mssgle:LineSegment
+                    End="67,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.30638671875,43,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Members.Paths[Excel Source Output]"
+          TopLeft="199.5,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.5,48"
+              Start="0,0"
+              End="-16.5,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="-4,24" />
+                  <mssgle:LineSegment
+                    End="-12.5,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.5,24"
+                    Point2="-16.5,24"
+                    Point3="-16.5,28" />
+                  <mssgle:LineSegment
+                    End="-16.5,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Members.Paths[Data Conversion Output]"
+          TopLeft="185.75,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Members\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_Members]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Members\Excel Source">
     <Properties>
@@ -965,29 +988,6 @@ where [refTable].[first_name] = ? and [refTable].[last_name] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Members\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[tbl_Members]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Books_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{41B31BD7-6BDD-463E-9C68-F0E2435AA74D}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{36302083-41C5-4243-9930-FD348065A3AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Error Destination.txt">
+          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Outputs\Error Destination.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -37,7 +37,7 @@
               DTS:DataType="302"
               DTS:TextQualified="True"
               DTS:ObjectName="Flat File Source Error Output Column"
-              DTS:DTSID="{6F44AEE8-B291-4823-8504-7EC6608203EB}"
+              DTS:DTSID="{881A91EB-1191-4765-ABB7-EEEC61781F53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -45,7 +45,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{DD0AD73C-CA2F-4272-9543-95FA9A1F46A4}"
+              DTS:DTSID="{D5A6F38C-1D8B-4556-BD20-46FE31E40219}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -53,7 +53,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{74D75D0A-02EA-414A-9D12-B8E5E21891A8}"
+              DTS:DTSID="{D42B648D-2687-449A-83D9-F03D73A0F7B2}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1122,9 +1122,9 @@ where [refTable].[author_name] = ?</property>
           Id="Package\Books Task\Lookup Author ID"
           TopLeft="100,182" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Books Task\OLE DB Destination"
-          TopLeft="102,384" />
+          Size="159,42"
+          Id="Package\Books Task\Error Destination"
+          TopLeft="305,67" />
         <NodeLayout
           Size="174,42"
           Id="Package\Books Task\Insert Unique Books"
@@ -1133,42 +1133,10 @@ where [refTable].[author_name] = ?</property>
           Size="142,42"
           Id="Package\Books Task\Books Source"
           TopLeft="113,2" />
-        <EdgeLayout
-          Id="Package\Books Task.Paths[Lookup No Match Output]"
-          TopLeft="175,321">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.5,63"
-              Start="0,0"
-              End="12.5,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.5"
-                    Point2="0,31.5"
-                    Point3="4,31.5" />
-                  <mssgle:LineSegment
-                    End="8.5,31.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.5,31.5"
-                    Point2="12.5,31.5"
-                    Point3="12.5,35.5" />
-                  <mssgle:LineSegment
-                    End="12.5,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-49.55638671875,36.5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Books Task\OLE DB Destination"
+          TopLeft="102,384" />
         <EdgeLayout
           Id="Package\Books Task.Paths[Lookup Match Output]"
           TopLeft="178,224">
@@ -1215,10 +1183,6 @@ where [refTable].[author_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Books Task\Error Destination"
-          TopLeft="305,67" />
         <EdgeLayout
           Id="Package\Books Task.Paths[Flat File Source Error Output]"
           TopLeft="206.333333333333,44">
@@ -1255,6 +1219,42 @@ where [refTable].[author_name] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Books Task.Paths[Lookup No Match Output]"
+          TopLeft="175,321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,63"
+              Start="0,0"
+              End="12.5,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="4,31.5" />
+                  <mssgle:LineSegment
+                    End="8.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,31.5"
+                    Point2="12.5,31.5"
+                    Point3="12.5,35.5" />
+                  <mssgle:LineSegment
+                    End="12.5,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.55638671875,36.5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1282,25 +1282,12 @@ where [refTable].[author_name] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Books Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Books Task\Insert Unique Books">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1310,10 +1297,23 @@ where [refTable].[author_name] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Books Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IssuedBooks_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{62C9282E-BFCF-41AC-A648-BAF109AD28C4}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{B18F755B-5691-411E-924E-AF9B738B08E9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\r91pa\Desktop\library_management_system\Issued_Books.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\r91pa\Desktop\library_management_system\Data Files\Issued_Books.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -39,7 +39,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\NoBookMatches.txt">
+          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Outputs\NoBookMatches.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="book_id"
-              DTS:DTSID="{062058C6-830B-4550-BFCD-D099D4176DE5}"
+              DTS:DTSID="{8C6DC72C-F5B6-4AEE-B508-D4D361B14D85}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="member_id"
-              DTS:DTSID="{6EAA11AD-48F0-4F7D-B034-01E19A8D8333}"
+              DTS:DTSID="{5355CCFC-E804-4E15-BB6E-57ADAB0BEB0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="date_issued"
-              DTS:DTSID="{A05F747C-8030-4FCB-A081-4881CD4C4595}"
+              DTS:DTSID="{033B4CEE-AAD1-45CD-90DE-53A2A64A136D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +71,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="date_returned"
-              DTS:DTSID="{0D8BD867-0321-450C-9CED-88752ED9294F}"
+              DTS:DTSID="{B353CDE2-B19A-4FDC-BC7C-D8C67A68F001}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -90,7 +90,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\NoMemberMatches.txt">
+          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Outputs\NoMemberMatches.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -98,7 +98,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="book_id"
-              DTS:DTSID="{B2C6EA2F-AE78-453D-B09A-090386437EEE}"
+              DTS:DTSID="{360B52B9-B89C-4E38-9EFD-ECC0A0C3B3BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -106,7 +106,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="member_id"
-              DTS:DTSID="{AB8D9C8F-BA63-432C-95C9-4A284B18FEE0}"
+              DTS:DTSID="{8C23C756-7EDC-406F-B932-36D2C30F5F49}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +114,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="date_issued"
-              DTS:DTSID="{C9E5E4FA-6527-4D4E-8828-EDABFD936BDA}"
+              DTS:DTSID="{9A46990B-4DD4-419F-A37D-AE2B8E1EBCC9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +122,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="date_returned"
-              DTS:DTSID="{DB66BFC8-C98E-43CE-B9E7-F9A47EE3E224}"
+              DTS:DTSID="{55DF275F-01D9-4B94-8C8A-595BB929DA5C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -141,7 +141,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\BooksIssuedNulls.txt">
+          DTS:ConnectionString="C:\Users\r91pa\Desktop\library_management_system\Outputs\BooksIssuedNulls.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +149,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{969F80AE-E7BE-42F9-8FDF-6811C24AE873}"
+              DTS:DTSID="{D0054AB3-929C-4C4C-BBFF-472C8B1C9ABA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -157,7 +157,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="book_id"
-              DTS:DTSID="{E0A94ED3-E498-49F3-9044-B4E9C6A1A92B}"
+              DTS:DTSID="{AC0DF1CA-6D09-43F3-9400-448876C72EA5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="19"
               DTS:TextQualified="True"
               DTS:ObjectName="member_id"
-              DTS:DTSID="{2F9B308E-CBDD-49DB-A746-0475E9369168}"
+              DTS:DTSID="{6FD4318F-DA11-41AC-A0DB-0BA9A2CDB1A0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="date_issued"
-              DTS:DTSID="{2F35AB54-2DC8-4884-B80D-EAEE618857FB}"
+              DTS:DTSID="{CD928945-F7BA-4AF2-B48E-F7CAE253C559}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -181,7 +181,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="date_returned"
-              DTS:DTSID="{1C63A26C-3A21-4226-9503-8C364EC9CE77}"
+              DTS:DTSID="{8836C112-30BD-4208-BAB0-0CC4FD616DCF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1415,269 +1415,37 @@ where [refTable].[id] = ?</property>
           Id="Package\Load Books Issued Task\Books Issued Source"
           TopLeft="241,68" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\Load Books Issued Task\Handle Nulls"
-          TopLeft="252,151" />
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Excel Source Output]"
-          TopLeft="329.5,110">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8.5,41"
-              Start="0,0"
-              End="-8.5,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="-4,20.5" />
-                  <mssgle:LineSegment
-                    End="-4.5,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.5,20.5"
-                    Point2="-8.5,20.5"
-                    Point3="-8.5,24.5" />
-                  <mssgle:LineSegment
-                    End="-8.5,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Load Books Issued Task\Nulls File"
-          TopLeft="513,177" />
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Handle Nulls]"
-          TopLeft="390,172">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="123,26"
-              Start="0,0"
-              End="115.5,26">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="57.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="57.5,0"
-                    Point2="61.5,0"
-                    Point3="61.5,4" />
-                  <mssgle:LineSegment
-                    End="61.5,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="61.5,22"
-                    Point2="61.5,26"
-                    Point3="65.5,26" />
-                  <mssgle:LineSegment
-                    End="115.5,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="33.422421875,-15.7490234375,56.15515625,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="170,42"
           Id="Package\Load Books Issued Task\Books Issued Table"
           TopLeft="264,464" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\Load Books Issued Task\Lookup Book Id"
-          TopLeft="264,243" />
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Conditional Split Default Output]"
-          TopLeft="321,193">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19.5,50"
-              Start="0,0"
-              End="19.5,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
-                  <mssgle:LineSegment
-                    End="15.5,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.5,25"
-                    Point2="19.5,25"
-                    Point3="19.5,29" />
-                  <mssgle:LineSegment
-                    End="19.5,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-60.86390625,30,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="232,42"
+          Id="Package\Load Books Issued Task\No Member Matches Destination"
+          TopLeft="550,394" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Load Books Issued Task\Nulls File"
+          TopLeft="513,177" />
         <NodeLayout
           Size="168,42"
           Id="Package\Load Books Issued Task\Lookup Member Id"
           TopLeft="267,324" />
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Lookup Match Output]"
-          TopLeft="340.5,285">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="10.5,39"
-              Start="0,0"
-              End="10.5,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="4,19.5" />
-                  <mssgle:LineSegment
-                    End="6.5,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.5,19.5"
-                    Point2="10.5,19.5"
-                    Point3="10.5,23.5" />
-                  <mssgle:LineSegment
-                    End="10.5,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-42.94138671875,24.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Load Books Issued Task\Lookup"
-          TopLeft="292,388" />
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Lookup Match Output1]"
-          TopLeft="351,366">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54,43"
-              Start="0,0"
-              End="46.5,43">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39"
-                    Point2="0,43"
-                    Point3="4,43" />
-                  <mssgle:LineSegment
-                    End="46.5,43" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-22.94138671875,48,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Lookup No Match Output]"
-          TopLeft="348.75,430">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,7.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="216,42"
           Id="Package\Load Books Issued Task\No Book matches destination"
           TopLeft="529,323" />
-        <EdgeLayout
-          Id="Package\Load Books Issued Task.Paths[Lookup No Match Output1]"
-          TopLeft="364.666666666667,285">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="272.333333333333,38"
-              Start="0,0"
-              End="272.333333333333,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.4359637774903" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.4359637774903"
-                    Point2="0,15.4359637774903"
-                    Point3="4,15.4359637774903" />
-                  <mssgle:LineSegment
-                    End="268.333333333333,15.4359637774903" />
-                  <mssgle:CubicBezierSegment
-                    Point1="268.333333333333,15.4359637774903"
-                    Point2="272.333333333333,15.4359637774903"
-                    Point3="272.333333333333,19.4359637774903" />
-                  <mssgle:LineSegment
-                    End="272.333333333333,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="80.3602799479167,20.4359637774903,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="232,42"
-          Id="Package\Load Books Issued Task\No Member Matches Destination"
-          TopLeft="550,394" />
+          Size="138,42"
+          Id="Package\Load Books Issued Task\Handle Nulls"
+          TopLeft="252,151" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Load Books Issued Task\Lookup"
+          TopLeft="292,388" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Load Books Issued Task\Lookup Book Id"
+          TopLeft="264,243" />
         <EdgeLayout
           Id="Package\Load Books Issued Task.Paths[Lookup No Match Output2]"
           TopLeft="377.666666666667,366">
@@ -1714,6 +1482,238 @@ where [refTable].[id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Lookup No Match Output1]"
+          TopLeft="364.666666666667,285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="272.333333333333,38"
+              Start="0,0"
+              End="272.333333333333,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.4359637774903" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.4359637774903"
+                    Point2="0,15.4359637774903"
+                    Point3="4,15.4359637774903" />
+                  <mssgle:LineSegment
+                    End="268.333333333333,15.4359637774903" />
+                  <mssgle:CubicBezierSegment
+                    Point1="268.333333333333,15.4359637774903"
+                    Point2="272.333333333333,15.4359637774903"
+                    Point3="272.333333333333,19.4359637774903" />
+                  <mssgle:LineSegment
+                    End="272.333333333333,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="80.3602799479167,20.4359637774903,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Lookup No Match Output]"
+          TopLeft="348.75,430">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,7.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Lookup Match Output1]"
+          TopLeft="351,366">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54,43"
+              Start="0,0"
+              End="46.5,43">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
+                  <mssgle:LineSegment
+                    End="46.5,43" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.94138671875,48,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Lookup Match Output]"
+          TopLeft="340.5,285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,39"
+              Start="0,0"
+              End="10.5,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
+                  <mssgle:LineSegment
+                    End="6.5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,19.5"
+                    Point2="10.5,19.5"
+                    Point3="10.5,23.5" />
+                  <mssgle:LineSegment
+                    End="10.5,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-42.94138671875,24.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Handle Nulls]"
+          TopLeft="390,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123,26"
+              Start="0,0"
+              End="115.5,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57.5,0"
+                    Point2="61.5,0"
+                    Point3="61.5,4" />
+                  <mssgle:LineSegment
+                    End="61.5,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.5,22"
+                    Point2="61.5,26"
+                    Point3="65.5,26" />
+                  <mssgle:LineSegment
+                    End="115.5,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.422421875,-15.7490234375,56.15515625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Excel Source Output]"
+          TopLeft="329.5,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.5,41"
+              Start="0,0"
+              End="-8.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="-4,20.5" />
+                  <mssgle:LineSegment
+                    End="-4.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,20.5"
+                    Point2="-8.5,20.5"
+                    Point3="-8.5,24.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Books Issued Task.Paths[Conditional Split Default Output]"
+          TopLeft="321,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5,50"
+              Start="0,0"
+              End="19.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
+                  <mssgle:LineSegment
+                    End="15.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,25"
+                    Point2="19.5,25"
+                    Point3="19.5,29" />
+                  <mssgle:LineSegment
+                    End="19.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-60.86390625,30,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1744,35 +1744,12 @@ where [refTable].[id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Books Issued Task\Lookup Book Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[tbl_Books]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load Books Issued Task\Lookup Member Id">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1782,7 +1759,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1795,7 +1772,7 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1805,7 +1782,30 @@ where [refTable].[id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Books Issued Task\Lookup Book Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_Books]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
