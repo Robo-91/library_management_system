@@ -1,0 +1,455 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "LAPTOP-9TKNNVCMLEARNINGSERVER ",
+        "connectionString": "Provider=SQLNCLI11;Data Source=LAPTOP-9TKNNVCM\\LEARNINGSERVER;Initial Catalog=Library_App_DB;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "r91palmer@outlook.com",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "tbl_Authors",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "author_name",
+            "dataType": "string",
+            "sourceColumn": "author_name",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tbl_Authors",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[tbl_Authors].* FROM [dbo].[tbl_Authors] ",
+              "dataSource": "LAPTOP-9TKNNVCMLEARNINGSERVER "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[tbl_Authors].* FROM [dbo].[tbl_Authors] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tbl_Authors"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "tbl_Books",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "title",
+            "dataType": "string",
+            "sourceColumn": "title",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "author_id",
+            "dataType": "int64",
+            "sourceColumn": "author_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "average_rating",
+            "dataType": "double",
+            "sourceColumn": "average_rating",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "isbn",
+            "dataType": "string",
+            "sourceColumn": "isbn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "isbn13",
+            "dataType": "string",
+            "sourceColumn": "isbn13",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "num_pages",
+            "dataType": "int64",
+            "sourceColumn": "num_pages",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ratings_count",
+            "dataType": "int64",
+            "sourceColumn": "ratings_count",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "text_reviews_count",
+            "dataType": "int64",
+            "sourceColumn": "text_reviews_count",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "publication_date",
+            "dataType": "dateTime",
+            "sourceColumn": "publication_date",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "publisher",
+            "dataType": "string",
+            "sourceColumn": "publisher",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tbl_Books",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[tbl_Books].* FROM [dbo].[tbl_Books] ",
+              "dataSource": "LAPTOP-9TKNNVCMLEARNINGSERVER "
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Overall Average",
+            "expression": "AVERAGE(tbl_Books[average_rating])"
+          },
+          {
+            "name": "Sum of ratings_count",
+            "expression": "SUM([ratings_count])"
+          },
+          {
+            "name": "Sum of text_reviews_count",
+            "expression": "SUM([text_reviews_count])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[tbl_Books].* FROM [dbo].[tbl_Books] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tbl_Books"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "tbl_BooksIssued",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "book_id",
+            "dataType": "int64",
+            "sourceColumn": "book_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "member_id",
+            "dataType": "int64",
+            "sourceColumn": "member_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "date_issued",
+            "dataType": "dateTime",
+            "sourceColumn": "date_issued",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "date_returned",
+            "dataType": "dateTime",
+            "sourceColumn": "date_returned",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "type": "calculated",
+            "name": "Days Issued",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "DATEDIFF(tbl_BooksIssued[date_issued],tbl_BooksIssued[date_returned],DAY)"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tbl_BooksIssued",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[tbl_BooksIssued].* FROM [dbo].[tbl_BooksIssued] ",
+              "dataSource": "LAPTOP-9TKNNVCMLEARNINGSERVER "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[tbl_BooksIssued].* FROM [dbo].[tbl_BooksIssued] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tbl_BooksIssued"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "tbl_Members",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "first_name",
+            "dataType": "string",
+            "sourceColumn": "first_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "last_name",
+            "dataType": "string",
+            "sourceColumn": "last_name",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "membership_id",
+            "dataType": "int64",
+            "sourceColumn": "membership_id",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tbl_Members",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[tbl_Members].* FROM [dbo].[tbl_Members] ",
+              "dataSource": "LAPTOP-9TKNNVCMLEARNINGSERVER "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[tbl_Members].* FROM [dbo].[tbl_Members] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tbl_Members"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "tbl_MembershipType",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "member_type",
+            "dataType": "string",
+            "sourceColumn": "member_type",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "day_length",
+            "dataType": "int64",
+            "sourceColumn": "day_length",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tbl_MembershipType",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[tbl_MembershipType].* FROM [dbo].[tbl_MembershipType] ",
+              "dataSource": "LAPTOP-9TKNNVCMLEARNINGSERVER "
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[tbl_MembershipType].* FROM [dbo].[tbl_MembershipType] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tbl_MembershipType"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "tbl_Overdue",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "member_id",
+            "dataType": "int64",
+            "sourceColumn": "member_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "days_overdue",
+            "dataType": "int64",
+            "sourceColumn": "days_overdue",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "total_charge",
+            "dataType": "double",
+            "sourceColumn": "total_charge",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "tbl_Overdue",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[tbl_Overdue].* FROM [dbo].[tbl_Overdue] ",
+              "dataSource": "LAPTOP-9TKNNVCMLEARNINGSERVER "
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum of total_charge",
+            "expression": "SUM([total_charge])"
+          },
+          {
+            "name": "Sum of days_overdue",
+            "expression": "SUM([days_overdue])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[tbl_Overdue].* FROM [dbo].[tbl_Overdue] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "tbl_Overdue"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "d33cb999-823e-4735-9ef7-f573d8ef6dba",
+        "fromTable": "tbl_Books",
+        "fromColumn": "author_id",
+        "toTable": "tbl_Authors",
+        "toColumn": "id"
+      },
+      {
+        "name": "03d06646-22e3-44e3-964a-6749f669c5be",
+        "fromTable": "tbl_BooksIssued",
+        "fromColumn": "book_id",
+        "toTable": "tbl_Books",
+        "toColumn": "id"
+      },
+      {
+        "name": "d0ca5374-2b3a-4d03-a6d0-885d9ca5bdd5",
+        "fromTable": "tbl_BooksIssued",
+        "fromColumn": "member_id",
+        "toTable": "tbl_Members",
+        "toColumn": "id"
+      },
+      {
+        "name": "690ba3a1-1b21-478f-8dbc-f010974f388f",
+        "fromTable": "tbl_Members",
+        "fromColumn": "membership_id",
+        "toTable": "tbl_MembershipType",
+        "toColumn": "id"
+      },
+      {
+        "name": "3b192934-df01-468b-babd-64dd6c233d70",
+        "fromTable": "tbl_Overdue",
+        "fromColumn": "member_id",
+        "toTable": "tbl_Members",
+        "toColumn": "id"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
