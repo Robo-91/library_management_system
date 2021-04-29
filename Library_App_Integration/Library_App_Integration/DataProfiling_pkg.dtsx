@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DataProfiling_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{30E8BD24-BFD7-49C1-BAD8-5687D2C27333}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{8629E30C-9494-4685-B2F8-F4C54FA05EB0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -53,7 +53,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
-          Destination="Library_Data_Profile.xml">
+          Destination="Library_Data_Profile.xml"
+          OverwriteDestination="True">
           <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
   <ProfileVersion>1.0</ProfileVersion>
@@ -82,7 +83,7 @@
       <ColumnValueDistributionProfileRequest ID="ValueDistReq">
         <DataSourceID>{9C69E111-85A3-43D6-98B0-8F66FD0D7C5A}</DataSourceID>
         <Table Schema="dbo" Table="tbl_Books" />
-        <Column IsWildCard="true" />
+        <Column IsWildCard="false" ColumnName="title" />
         <Option>FrequentValues</Option>
         <FrequentValueThreshold>0.001</FrequentValueThreshold>
       </ColumnValueDistributionProfileRequest>
