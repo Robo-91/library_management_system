@@ -266,6 +266,13 @@
             "dataType": "int64",
             "sourceColumn": "membership_id",
             "sourceProviderType": "Integer"
+          },
+          {
+            "type": "calculated",
+            "name": "Full Name",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": " CONCATENATE(tbl_Members[first_name],CONCATENATE(\" \",tbl_Members[last_name]))"
           }
         ],
         "partitions": [
@@ -442,6 +449,113 @@
         "fromColumn": "member_id",
         "toTable": "tbl_Members",
         "toColumn": "id"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "New Perspective",
+        "tables": [
+          {
+            "name": "tbl_Authors",
+            "columns": [
+              {
+                "name": "author_name"
+              }
+            ]
+          },
+          {
+            "name": "tbl_Books",
+            "columns": [
+              {
+                "name": "isbn"
+              },
+              {
+                "name": "isbn13"
+              },
+              {
+                "name": "publication_date"
+              },
+              {
+                "name": "publisher"
+              },
+              {
+                "name": "ratings_count"
+              },
+              {
+                "name": "text_reviews_count"
+              },
+              {
+                "name": "title"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Overall Average"
+              },
+              {
+                "name": "Sum of ratings_count"
+              },
+              {
+                "name": "Sum of text_reviews_count"
+              }
+            ]
+          },
+          {
+            "name": "tbl_BooksIssued",
+            "columns": [
+              {
+                "name": "date_issued"
+              },
+              {
+                "name": "date_returned"
+              },
+              {
+                "name": "Days Issued"
+              }
+            ]
+          },
+          {
+            "name": "tbl_Members",
+            "columns": [
+              {
+                "name": "first_name"
+              },
+              {
+                "name": "last_name"
+              },
+              {
+                "name": "Full Name"
+              }
+            ]
+          },
+          {
+            "name": "tbl_MembershipType",
+            "columns": [
+              {
+                "name": "member_type"
+              }
+            ]
+          },
+          {
+            "name": "tbl_Overdue",
+            "columns": [
+              {
+                "name": "days_overdue"
+              },
+              {
+                "name": "total_charge"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Sum of days_overdue"
+              },
+              {
+                "name": "Sum of total_charge"
+              }
+            ]
+          }
+        ]
       }
     ],
     "annotations": [
