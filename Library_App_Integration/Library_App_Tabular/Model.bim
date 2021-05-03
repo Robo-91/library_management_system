@@ -225,6 +225,12 @@
             }
           }
         ],
+        "measures": [
+          {
+            "name": "Total Days Issued",
+            "expression": " SUM(tbl_BooksIssued[Days Issued])"
+          }
+        ],
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
@@ -511,6 +517,11 @@
               },
               {
                 "name": "Days Issued"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Total Days Issued"
               }
             ]
           },
