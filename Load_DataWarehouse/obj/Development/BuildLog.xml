@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Load_DataWarehouse</Name>
-    <LastWriteTime>2021-05-05T19:10:35.0450464Z</LastWriteTime>
+    <LastWriteTime>2021-05-05T19:13:49.1771753Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimAuthor_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-05T19:10:09.436622Z</LastWriteTime>
+      <LastWriteTime>2021-05-05T19:12:11.1141339Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimBook_pkg.dtsx</Name>
+      <LastWriteTime>2021-05-05T19:17:44.2232818Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

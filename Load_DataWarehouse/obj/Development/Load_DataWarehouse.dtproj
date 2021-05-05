@@ -26,11 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-9TKNNVCM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAABS0y+RTyDXlovMjWmQCzNkJ/+29aaBMGfrsKrPJraOPQAAAAAOgAAAAAIAACAAAABK7hx4iQlmZBqZXCQYJByp/AgMhI6ui8NDg3RNLOZ/NJAAAADffkO+wGzjBB51W5KUem8qD4584rVXcaWoxMeWJlsdVcZFJyFWQ4HijKr9Wdq/rnRzdyi220bcgtdJ3ldd0HLo5P7Ws7okMrjeHsc4gi0uGfdMa3rJtgmvuUXVB0pAH5sFYLmXlrsG9PamstZYEBn+KIQR8f0jIgV6xqQDRKECNh7dhzo0Xg/cpUyuZJbq6uRAAAAARtfJOYcpKwtT86e2bUrfF9/Cepf2hJtIxanbpC0n/gwGNom6kQ9jpYAdIeRTnNcGjEVAQxcRf7PCj16HyBaSiQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAABxwAsNC/BQvkhaeMw9nRAni6ekyiYlfR/CUfNjtRW1YwAAAAAOgAAAAAIAACAAAADNWNkwd7W9tVAQdnJXmwzKdcM583429+HiIYTVGEli+5AAAAAfdOtufHoUjfk1QLHAYmztQKUPRjQwl3dMJMRu7lUDM+sOYRl/y2oXRNFCJj8s7PiO3ynWZOd2U6uJ6GwRMuCF+t0uR1JN5kKXiTEMxJxCzTi1WCO3HORL+U/eBK8AniNPLQ+rmHJlG9H6JwLLTvScQ9ZIiDZ4yqmS+XpJjje2WYef6X/Qwy4sV1wyFNRcCABAAAAAQMhaETI3S7QD1sKyQXzgJbmB+CP45RpSq0JLtrx4kj1miAxrykNpluo7w/YGW8heCXib0n9wcy1TyWtun621/Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="DimAuthor_pkg.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DimBook_pkg.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SourceConnection.conmgr" />
@@ -282,10 +283,27 @@
                 <SSIS:Property SSIS:Name="Name">DimAuthor_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{10EE75FA-F16C-43C9-A78D-1B7911E68251}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D3E7DE2E-685E-4224-8906-E7F5884F0C80}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DimBook_pkg.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{B9B43AF5-D30E-4078-879F-CFB9EA2EC748}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DimBook_pkg</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C2F20ACD-2E50-4EBE-A439-84305D99A04E}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
