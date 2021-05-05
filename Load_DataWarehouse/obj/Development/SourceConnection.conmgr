@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:ObjectName="SourceConnection"
   DTS:DTSID="{FD1CB238-4F71-4BFC-9009-A075D361FB75}"
