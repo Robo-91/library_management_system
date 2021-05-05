@@ -1,30 +1,30 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="5/5/2021 2:18:57 PM"
+  DTS:CreationDate="5/5/2021 2:18:46 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-9TKNNVCM"
   DTS:CreatorName="LAPTOP-9TKNNVCM\r91pa"
-  DTS:DTSID="{365A70D2-CCDC-49F6-AB04-D0691FD72954}"
+  DTS:DTSID="{D1490866-BA5D-467F-820C-6DE43F1B3EA0}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DimMember_pkg"
+  DTS:ObjectName="DimMembership_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{FA395505-54A3-43F5-B737-250D56E77CF4}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{1B0D1BD4-F9EB-46BF-9F2E-4C95B495DF91}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Load DimMember Task"
+      DTS:refId="Package\DimMembership Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{2C40DA66-19A9-4D2F-9F01-E4E3A681A4A8}"
+      DTS:DTSID="{7567B674-0441-41BF-B137-A71EF7659BB3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load DimMember Task"
+      DTS:ObjectName="DimMembership Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,11 +32,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Load DimMember Task\Insert Data Warehouse Destination"
+              refId="Package\DimMembership Task\Insert Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Insert Data Warehouse Destination"
+              name="Insert Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -47,7 +47,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DimMember]</property>
+                  name="OpenRowset">[dbo].[DimMembership]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -89,7 +89,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Connections[OleDbConnection]"
+                  refId="Package\DimMembership Task\Insert Destination.Connections[OleDbConnection]"
                   connectionManagerID="{ECA0441C-3021-4B78-A150-650BC8F74C88}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DestinationConnection]"
                   description="The OLE DB runtime connection used to access the database."
@@ -97,84 +97,70 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[id]"
                       cachedDataType="i4"
                       cachedName="id"
-                      externalMetadataColumnId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]" />
+                      externalMetadataColumnId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[id]" />
                     <inputColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[member_type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="first_name"
-                      externalMetadataColumnId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]" />
+                      cachedName="member_type"
+                      externalMetadataColumnId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_type]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[member_type]" />
                     <inputColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].Columns[last_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="last_name"
-                      externalMetadataColumnId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]" />
-                    <inputColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].Columns[membership_id]"
+                      refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[day_length]"
                       cachedDataType="i4"
-                      cachedName="membership_id"
-                      externalMetadataColumnId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[membership_id]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[membership_id]" />
+                      cachedName="day_length"
+                      externalMetadataColumnId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[day_length]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[day_length]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="first_name" />
+                      name="member_type" />
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="last_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input].ExternalColumns[membership_id]"
+                      refId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[day_length]"
                       dataType="i4"
-                      name="membership_id" />
+                      name="day_length" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\DimMembership Task\Insert Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\DimMembership Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\Insert Data Warehouse Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DimMembership Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\Insert Data Warehouse Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\DimMembership Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\Insert Data Warehouse Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DimMembership Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -183,11 +169,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load DimMember Task\OLE DB Source"
+              refId="Package\DimMembership Task\Membership Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="OLE DB Source"
+              name="Membership Source"
               usesDispositions="true"
               version="7">
               <properties>
@@ -198,7 +184,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[tbl_Members]</property>
+                  name="OpenRowset">[dbo].[tbl_MembershipType]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -232,7 +218,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimMember Task\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\DimMembership Task\Membership Source.Connections[OleDbConnection]"
                   connectionManagerID="{FD1CB238-4F71-4BFC-9009-A075D361FB75}:external"
                   connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
@@ -240,113 +226,89 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]"
+                      externalMetadataColumnId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[id]"
                       name="id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[member_type]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
+                      externalMetadataColumnId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].ExternalColumns[member_type]"
                       length="50"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]"
-                      name="first_name"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[member_type]"
+                      name="member_type"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
-                      length="50"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
-                      name="last_name"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[membership_id]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[day_length]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[membership_id]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[membership_id]"
-                      name="membership_id"
+                      externalMetadataColumnId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].ExternalColumns[day_length]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[day_length]"
+                      name="day_length"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].ExternalColumns[member_type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="first_name" />
+                      name="member_type" />
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="last_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[membership_id]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].ExternalColumns[day_length]"
                       dataType="i4"
-                      name="membership_id" />
+                      name="day_length" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[id]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[id]"
                       name="id" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[first_name]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[member_type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[first_name]"
-                      name="first_name" />
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[member_type]"
+                      name="member_type" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[last_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[last_name]"
-                      name="last_name" />
-                    <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[membership_id]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[day_length]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[membership_id]"
-                      name="membership_id" />
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[day_length]"
+                      name="day_length" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -355,7 +317,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load DimMember Task\Slowly Changing Dimension"
+              refId="Package\DimMembership Task\Slowly Changing Dimension"
               componentClassID="Microsoft.SCD"
               contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
               description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
@@ -366,7 +328,7 @@
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [first_name], [id], [last_name], [membership_id] FROM [dbo].[DimMember]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [day_length], [id], [member_type] FROM [dbo].[DimMembership]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -403,7 +365,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Connections[LookupConnection]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Connections[LookupConnection]"
                   connectionManagerID="{ECA0441C-3021-4B78-A150-650BC8F74C88}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DestinationConnection]"
                   description="Defines the connection to use for lookups in the dimension table"
@@ -411,30 +373,28 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
                   name="Slowly Changing Dimension Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[first_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="first_name"
-                      externalMetadataColumnId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[first_name]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]">
+                      refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[day_length]"
+                      cachedDataType="i4"
+                      cachedName="day_length"
+                      externalMetadataColumnId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[day_length]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[day_length]">
                       <properties>
                         <property
                           dataType="System.Int32"
                           name="ColumnType"
-                          typeConverter="ColumnType">4</property>
+                          typeConverter="ColumnType">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[id]"
+                      refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[id]"
                       cachedDataType="i4"
                       cachedName="id"
-                      externalMetadataColumnId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[id]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]">
+                      externalMetadataColumnId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[id]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -443,13 +403,13 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[last_name]"
+                      refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[member_type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="last_name"
-                      externalMetadataColumnId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[last_name]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]">
+                      cachedName="member_type"
+                      externalMetadataColumnId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[member_type]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[member_type]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -457,102 +417,83 @@
                           typeConverter="ColumnType">4</property>
                       </properties>
                     </inputColumn>
-                    <inputColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[membership_id]"
-                      cachedDataType="i4"
-                      cachedName="membership_id"
-                      externalMetadataColumnId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[membership_id]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[membership_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[first_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="first_name" />
+                      refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[day_length]"
+                      dataType="i4"
+                      name="day_length" />
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[id]"
+                      refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[last_name]"
+                      refId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[member_type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="last_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[membership_id]"
-                      dataType="i4"
-                      name="membership_id" />
+                      name="member_type" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[Unchanged Output]"
                   description="Unchanged rows"
                   exclusionGroup="1"
                   name="Unchanged Output"
-                  synchronousInputId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  synchronousInputId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[New Output]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[New Output]"
                   description="New rows"
                   exclusionGroup="1"
                   name="New Output"
-                  synchronousInputId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  synchronousInputId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
                   description="Rows with changes in columns tagged FixedAttribute"
                   exclusionGroup="1"
                   name="Fixed Attribute Output"
-                  synchronousInputId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  synchronousInputId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
                   description="These rows contain new information for ChangingAttribute (Type 1) column changes"
                   exclusionGroup="1"
                   name="Changing Attribute Updates Output"
-                  synchronousInputId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  synchronousInputId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
                   description="HistoricalAttribute (Type 2) changes result in these new rows"
                   exclusionGroup="2"
                   name="Historical Attribute Inserts Output"
-                  synchronousInputId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  synchronousInputId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  refId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
                   description="Information to update unpopulated initial dimension row"
                   exclusionGroup="1"
                   name="Inferred Member Updates Output"
-                  synchronousInputId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  synchronousInputId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\Load DimMember Task\Update Membership Changes"
+              refId="Package\DimMembership Task\Update Day Length"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="Update Membership Changes"
+              name="Update Day Length"
               usesDispositions="true"
               version="2">
               <properties>
@@ -565,7 +506,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimMember] SET [membership_id] = ? WHERE [id] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimMembership] SET [day_length] = ? WHERE [id] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -573,7 +514,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimMember Task\Update Membership Changes.Connections[OleDbConnection]"
+                  refId="Package\DimMembership Task\Update Day Length.Connections[OleDbConnection]"
                   connectionManagerID="{ECA0441C-3021-4B78-A150-650BC8F74C88}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DestinationConnection]"
                   description="The OLE DB runtime connection used to access the database."
@@ -581,29 +522,29 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input]"
+                  refId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input].Columns[id]"
+                      refId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input].Columns[day_length]"
+                      cachedDataType="i4"
+                      cachedName="day_length"
+                      externalMetadataColumnId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[day_length]" />
+                    <inputColumn
+                      refId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input].Columns[id]"
                       cachedDataType="i4"
                       cachedName="id"
-                      externalMetadataColumnId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input].Columns[membership_id]"
-                      cachedDataType="i4"
-                      cachedName="membership_id"
-                      externalMetadataColumnId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[membership_id]" />
+                      externalMetadataColumnId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output].Columns[id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       dataType="i4"
                       name="Param_0">
                       <properties>
@@ -614,7 +555,7 @@
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="i4"
                       name="Param_1">
                       <properties>
@@ -629,29 +570,29 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load DimMember Task\Update Membership Changes.Outputs[OLE DB Command Output]"
+                  refId="Package\DimMembership Task\Update Day Length.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimMember Task\Update Membership Changes.Outputs[OLE DB Command Error Output]"
+                  refId="Package\DimMembership Task\Update Day Length.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimMember Task\Update Membership Changes.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\DimMembership Task\Update Day Length.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\Update Membership Changes.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DimMembership Task\Update Day Length.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimMember Task\Update Membership Changes.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\DimMembership Task\Update Day Length.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimMember Task\Update Membership Changes.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DimMembership Task\Update Day Length.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -662,20 +603,20 @@
           </components>
           <paths>
             <path
-              refId="Package\Load DimMember Task.Paths[Changing Attribute Updates Output]"
-              endId="Package\Load DimMember Task\Update Membership Changes.Inputs[OLE DB Command Input]"
+              refId="Package\DimMembership Task.Paths[Changing Attribute Updates Output]"
+              endId="Package\DimMembership Task\Update Day Length.Inputs[OLE DB Command Input]"
               name="Changing Attribute Updates Output"
-              startId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+              startId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\Load DimMember Task.Paths[New Output]"
-              endId="Package\Load DimMember Task\Insert Data Warehouse Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\DimMembership Task.Paths[New Output]"
+              endId="Package\DimMembership Task\Insert Destination.Inputs[OLE DB Destination Input]"
               name="New Output"
-              startId="Package\Load DimMember Task\Slowly Changing Dimension.Outputs[New Output]" />
+              startId="Package\DimMembership Task\Slowly Changing Dimension.Outputs[New Output]" />
             <path
-              refId="Package\Load DimMember Task.Paths[OLE DB Source Output]"
-              endId="Package\Load DimMember Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+              refId="Package\DimMembership Task.Paths[OLE DB Source Output]"
+              endId="Package\DimMembership Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
-              startId="Package\Load DimMember Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\DimMembership Task\Membership Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -694,27 +635,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="187,42"
-          Id="Package\Load DimMember Task"
-          TopLeft="121,79" />
+          Size="180,42"
+          Id="Package\DimMembership Task"
+          TopLeft="211,47" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load DimMember Task">
+    design-time-name="Package\DimMembership Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Load DimMember Task\OLE DB Source"
-          TopLeft="237,5.5" />
+          Size="172,42"
+          Id="Package\DimMembership Task\Membership Source"
+          TopLeft="226,5.5" />
         <NodeLayout
           Size="209,42"
-          Id="Package\Load DimMember Task\Slowly Changing Dimension"
+          Id="Package\DimMembership Task\Slowly Changing Dimension"
           TopLeft="207.5,107.5" />
         <EdgeLayout
-          Id="Package\Load DimMember Task.Paths[OLE DB Source Output]"
+          Id="Package\DimMembership Task.Paths[OLE DB Source Output]"
           TopLeft="312,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -736,82 +677,82 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="244,42"
-          Id="Package\Load DimMember Task\Insert Data Warehouse Destination"
-          TopLeft="5.50000000000006,209.5" />
+          Size="163,42"
+          Id="Package\DimMembership Task\Insert Destination"
+          TopLeft="137.5,296.5" />
         <EdgeLayout
-          Id="Package\Load DimMember Task.Paths[New Output]"
+          Id="Package\DimMembership Task.Paths[New Output]"
           TopLeft="278.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-151,60"
+              EndConnector="-59.5,147"
               Start="0,0"
-              End="-151,52.5">
+              End="-59.5,139.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2735042735043" />
+                    End="0,55.4700854700855" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
+                    Point1="0,55.4700854700855"
+                    Point2="0,59.4700854700855"
+                    Point3="-4,59.4700854700855" />
                   <mssgle:LineSegment
-                    End="-147,24.2735042735043" />
+                    End="-55.5,59.4700854700855" />
                   <mssgle:CubicBezierSegment
-                    Point1="-147,24.2735042735043"
-                    Point2="-151,24.2735042735043"
-                    Point3="-151,28.2735042735043" />
+                    Point1="-55.5,59.4700854700855"
+                    Point2="-59.5,59.4700854700855"
+                    Point3="-59.5,63.4700854700855" />
                   <mssgle:LineSegment
-                    End="-151,52.5" />
+                    End="-59.5,139.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-102.59138671875,29.2735042735043,54.1827734375,11.43359375"
+              BoundingBox="-56.84138671875,64.4700854700855,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="217,42"
-          Id="Package\Load DimMember Task\Update Membership Changes"
-          TopLeft="347,206.5" />
+          Size="170,42"
+          Id="Package\DimMembership Task\Update Day Length"
+          TopLeft="357,294.5" />
         <EdgeLayout
-          Id="Package\Load DimMember Task.Paths[Changing Attribute Updates Output]"
+          Id="Package\DimMembership Task.Paths[Changing Attribute Updates Output]"
           TopLeft="345.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="110,57"
+              EndConnector="96.4999999999999,145"
               Start="0,0"
-              End="110,49.5">
+              End="96.4999999999999,137.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.0598290598291" />
+                    End="0,54.6609686609687" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.0598290598291"
-                    Point2="0,23.0598290598291"
-                    Point3="4,23.0598290598291" />
+                    Point1="0,54.6609686609687"
+                    Point2="0,58.6609686609687"
+                    Point3="4,58.6609686609687" />
                   <mssgle:LineSegment
-                    End="106,23.0598290598291" />
+                    End="92.4999999999999,58.6609686609687" />
                   <mssgle:CubicBezierSegment
-                    Point1="106,23.0598290598291"
-                    Point2="110,23.0598290598291"
-                    Point3="110,27.0598290598291" />
+                    Point1="92.4999999999999,58.6609686609687"
+                    Point2="96.4999999999999,58.6609686609687"
+                    Point3="96.4999999999999,62.6609686609687" />
                   <mssgle:LineSegment
-                    End="110,49.5" />
+                    End="96.4999999999999,137.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-23.53390625,28.0598290598291,157.0678125,11.6630859375"
+              BoundingBox="-30.2839062500001,63.6609686609687,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -819,7 +760,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimMember Task\OLE DB Source">
+    design-time-name="Package\DimMembership Task\Membership Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -832,7 +773,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimMember Task\Slowly Changing Dimension">
+    design-time-name="Package\DimMembership Task\Slowly Changing Dimension">
     <Properties>
       <Property>
         <Name>SCDMetadata</Name>
@@ -840,31 +781,25 @@
           type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionID&gt;{ECA0441C-3021-4B78-A150-650BC8F74C88}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[DimMember]&lt;/TableName&gt;
+  &lt;TableName&gt;[dbo].[DimMembership]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[first_name]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;first_name&lt;/ColumnName&gt;
+      &lt;IdentificationString&gt;Membership Source.Outputs[OLE DB Source Output].Columns[day_length]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;day_length&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[id]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;Membership Source.Outputs[OLE DB Source Output].Columns[id]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;id&lt;/ColumnName&gt;
       &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;last_name&lt;/ColumnName&gt;
+      &lt;IdentificationString&gt;Membership Source.Outputs[OLE DB Source Output].Columns[member_type]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;member_type&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[membership_id]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;membership_id&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
   &lt;/InputToColumnsCollection&gt;
   &lt;GeneratedComponentsIdentificationStrings&gt;
