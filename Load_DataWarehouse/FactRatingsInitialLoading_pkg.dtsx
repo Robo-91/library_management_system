@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactRatingsInitialLoading_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{2315F86B-935B-423A-AD5A-16266E4AABA3}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{748DAE95-D527-47CB-883D-A155267A3DC5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -114,6 +114,7 @@
       DTS:refId="Package\CDC Initial Load End"
       DTS:CreationName="Attunity.CdcControlTask"
       DTS:Description="CDC Control Task"
+      DTS:Disabled="True"
       DTS:DTSID="{47418854-8566-4DDE-9972-4A5CDA9940D5}"
       DTS:ExecutableType="Attunity.CdcControlTask"
       DTS:LocaleID="-1"
@@ -140,6 +141,7 @@
       DTS:refId="Package\CDC Initial Load Start"
       DTS:CreationName="Attunity.CdcControlTask"
       DTS:Description="CDC Control Task"
+      DTS:Disabled="True"
       DTS:DTSID="{36203981-4C4F-4C03-B532-F710CB237B42}"
       DTS:ExecutableType="Attunity.CdcControlTask"
       DTS:LocaleID="-1"
@@ -166,6 +168,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{2B0EAE6E-DBB3-454F-9894-4CD4CA543736}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -898,26 +901,19 @@ where [refTable].[title] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task"
-          TopLeft="140,165" />
-        <AnnotationLayout
-          Text="This package only gets ran&#xD;&#xA;for initial loading! After the data&#xD;&#xA;is loaded into the data warehouse for the first time, you run the package&#xD;&#xA;that runs incremental loads."
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="412,88"
-          Id="45122d21-6cd9-4ca9-a893-bb7b1469d382"
-          TopLeft="369,139" />
+          Size="176,42"
+          Id="Package\CDC Initial Load End"
+          TopLeft="121,294" />
         <NodeLayout
           Size="181,42"
           Id="Package\CDC Initial Load Start"
           TopLeft="121,38" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\CDC Initial Load End"
-          TopLeft="121,294" />
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="140,165" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="213.5,80">
@@ -962,6 +958,13 @@ where [refTable].[title] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="This package only gets ran&#xA;for initial loading! After the data&#xA;is loaded into the data warehouse for the first time, you run the package&#xA;that runs incremental loads."
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="412,88"
+          Id="45122d21-6cd9-4ca9-a893-bb7b1469d382"
+          TopLeft="369,139" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -971,13 +974,21 @@ where [refTable].[title] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="113,42"
-          Id="Package\Data Flow Task\Lookup"
-          TopLeft="182,141" />
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="160,336" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Data Flow Task\Flat File Destination"
+          TopLeft="369,227" />
         <NodeLayout
           Size="138,42"
           Id="Package\Data Flow Task\Book Source"
           TopLeft="176,40" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Data Flow Task\Lookup"
+          TopLeft="182,141" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="241.75,82">
@@ -1000,14 +1011,6 @@ where [refTable].[title] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="160,336" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="369,227" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
           TopLeft="256,183">
@@ -1084,6 +1087,19 @@ where [refTable].[title] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Book Source">
     <Properties>
       <Property>
@@ -1102,7 +1118,7 @@ where [refTable].[title] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1112,23 +1128,10 @@ where [refTable].[title] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
