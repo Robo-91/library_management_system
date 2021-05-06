@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Load_DataWarehouse</Name>
-    <LastWriteTime>2021-05-06T18:26:33.0639343Z</LastWriteTime>
+    <LastWriteTime>2021-05-06T18:45:59.0888413Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -27,8 +27,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>FactRatings_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-06T18:26:32.9970161Z</LastWriteTime>
+      <Name>FactRatingsInitialLoading_pkg.dtsx</Name>
+      <LastWriteTime>2021-05-06T18:46:11.8472363Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

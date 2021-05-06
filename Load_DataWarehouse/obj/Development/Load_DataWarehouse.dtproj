@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-9TKNNVCM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAADCd2bRgNNpxZT941NH7dnZMY+uVsMEoFpIgWeWw3MrhAAAAAAOgAAAAAIAACAAAADZxu0dC+saX+SDxSh0DCnOfrmCk9NsB4KMd8HDXnx33JAAAACZj9wpwInMJK6+KHT0Yv8rdXobppG13XOMpOPEx5A2Ad4CFRIEDbDbjGqPV6QetTSJIlNAnBL1E+Fuut2lLU/e4BdKwPTQK3aJdZKZ2SokOAmMOnG5SUamGSi2fwd01tfnMfAHWnN7p1kVFU9ba6C0XAOOlMWBmXpE4K4jLSeA7DxepEOvGXJaSaMhU5tg6xFAAAAANcnAt3ddhYzOlRz1y+VC+vBKmLwmXMNT3MZXYdIzxNwiK+oyfM4yMvPFlaJ5B67EpMw7EnNKkVrF1F1qj+sSAg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAAAqfpfCLvWTQHVYht7S1S3px3BzyM9QdFGlP7HyJDEHWgAAAAAOgAAAAAIAACAAAAA6ePaguNbetWwRCk/nIL7Lp4Bh/GWTtb1uQRlSD+aFM5AAAADgHRkElcZ4bRVppY5wwJYCtEPJPz45zi8LI+IaN2RIAHCjw0BXaw5o7L8uaB60fVhnAkezdf/TsUpunZkwu59OmWYOF/ivjZ5oeDN7kaBGrPWNk0Byd/+SGdDDEYfm76zVBNYprQYJnROPrvApd1BKxqIy58aMojEvUH1KIleC/yQpG2pYhPhZnEqTgoHAmcRAAAAAcOY4/rtgivsk4ng/2WFMd8PHstZyRJYfp0IIoElDesbBJxcR+BYNtrSGu8oE5vjIt8LOwn6gpjhyaH46FdyBOw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -34,7 +34,7 @@
           <SSIS:Package SSIS:Name="DimBook_pkg.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimMembership_pkg.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimMember_pkg.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="FactRatings_pkg.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="FactRatingsInitialLoading_pkg.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SourceConnection.conmgr" />
@@ -348,22 +348,140 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="FactRatings_pkg.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="FactRatingsInitialLoading_pkg.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{F38ED6F1-1784-4133-8DC8-771545B3F669}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">FactRatings_pkg</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{4C94B99B-786C-4748-9B74-D5282A3B7E49}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">FactRatingsInitialLoading_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">28</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{707DE07E-FDEA-4CE3-B90E-4EDC9DE07CD1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2315F86B-935B-423A-AD5A-16266E4AABA3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=LAPTOP-9TKNNVCM\LEARNINGSERVER;Initial Catalog=Library_App_DB;Integrated Security=True;Application Name=SSIS-FactRatingsInitialLoading_pkg-{BFDADE6F-F670-4678-B6A1-7B612CC0390F}LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.ConnectUsingManagedIdentity">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Library_App_DB</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">LAPTOP-9TKNNVCM\LEARNINGSERVER</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.LAPTOP-9TKNNVCM\LEARNINGSERVER.Library_App_DB1.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.No Match Output Connection.AlwaysCheckForRowDelimiters">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
