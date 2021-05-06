@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactRatingsInitialLoading_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{748DAE95-D527-47CB-883D-A155267A3DC5}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{24BE7DB8-8238-46A5-89D0-594607F950E6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -114,7 +114,6 @@
       DTS:refId="Package\CDC Initial Load End"
       DTS:CreationName="Attunity.CdcControlTask"
       DTS:Description="CDC Control Task"
-      DTS:Disabled="True"
       DTS:DTSID="{47418854-8566-4DDE-9972-4A5CDA9940D5}"
       DTS:ExecutableType="Attunity.CdcControlTask"
       DTS:LocaleID="-1"
@@ -141,7 +140,6 @@
       DTS:refId="Package\CDC Initial Load Start"
       DTS:CreationName="Attunity.CdcControlTask"
       DTS:Description="CDC Control Task"
-      DTS:Disabled="True"
       DTS:DTSID="{36203981-4C4F-4C03-B532-F710CB237B42}"
       DTS:ExecutableType="Attunity.CdcControlTask"
       DTS:LocaleID="-1"
@@ -168,7 +166,6 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{2B0EAE6E-DBB3-454F-9894-4CD4CA543736}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"

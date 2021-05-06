@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactRatingsIncrementalLoading_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{2411698A-AB73-4A02-9246-2256EC51B014}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{60C41FB5-F4B5-4874-9211-43A0449B13F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1143,48 +1143,38 @@ where [refTable].[book_id] = ?</property>
           Size="134,42"
           Id="Package\FactRatings Incremental Loading Task\CDC Source"
           TopLeft="208,37" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\FactRatings Incremental Loading Task\Lookup"
+          TopLeft="77,249" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\FactRatings Incremental Loading Task\Insert Destination"
+          TopLeft="55,426" />
         <EdgeLayout
-          Id="Package\FactRatings Incremental Loading Task.Paths[Output]"
-          TopLeft="275,79">
+          Id="Package\FactRatings Incremental Loading Task.Paths[Lookup Match Output]"
+          TopLeft="135,291">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-24,81"
+              EndConnector="0,135"
               Start="0,0"
-              End="-24,73.5">
+              End="0,127.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.5"
-                    Point2="0,40.5"
-                    Point3="-4,40.5" />
-                  <mssgle:LineSegment
-                    End="-20,40.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20,40.5"
-                    Point2="-24,40.5"
-                    Point3="-24,44.5" />
-                  <mssgle:LineSegment
-                    End="-24,73.5" />
+                    End="0,127.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,57.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\FactRatings Incremental Loading Task\Insert Destination"
-          TopLeft="55,426" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\FactRatings Incremental Loading Task\Lookup"
-          TopLeft="77,249" />
         <EdgeLayout
           Id="Package\FactRatings Incremental Loading Task.Paths[InsertOutput]"
           TopLeft="251,202">
@@ -1222,27 +1212,37 @@ where [refTable].[book_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactRatings Incremental Loading Task.Paths[Lookup Match Output]"
-          TopLeft="135,291">
+          Id="Package\FactRatings Incremental Loading Task.Paths[Output]"
+          TopLeft="275,79">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,135"
+              EndConnector="-24,81"
               Start="0,0"
-              End="0,127.5">
+              End="-24,73.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,127.5" />
+                    End="0,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5"
+                    Point2="0,40.5"
+                    Point3="-4,40.5" />
+                  <mssgle:LineSegment
+                    End="-20,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20,40.5"
+                    Point2="-24,40.5"
+                    Point3="-24,44.5" />
+                  <mssgle:LineSegment
+                    End="-24,73.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,57.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1251,6 +1251,29 @@ where [refTable].[book_id] = ?</property>
   <PipelineComponentMetadata
     design-time-name="Package\FactRatings Incremental Loading Task\CDC Source">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactRatings Incremental Loading Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactRatings]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -1266,29 +1289,6 @@ where [refTable].[book_id] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactRatings Incremental Loading Task\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactRatings]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
