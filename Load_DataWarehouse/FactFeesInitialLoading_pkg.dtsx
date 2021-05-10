@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactFeesInitialLoading_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{3A6F04E9-E3CC-434A-A461-73BD69E6B1B7}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{F099E538-6692-4BFA-9ECD-CCFC6C5157E9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -93,184 +93,6 @@
           version="1">
           <components>
             <component
-              refId="Package\Load Fact Fees Table\BooksIssued Source"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="BooksIssued Source"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[tbl_BooksIssued]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load Fact Fees Table\BooksIssued Source.Connections[OleDbConnection]"
-                  connectionManagerID="{FD1CB238-4F71-4BFC-9009-A075D361FB75}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[book_id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[book_id]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[book_id]"
-                      name="book_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[member_id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[member_id]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[member_id]"
-                      name="member_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[date_issued]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[date_issued]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[date_issued]"
-                      name="date_issued"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[date_returned]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[date_returned]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[date_returned]"
-                      name="date_returned"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[book_id]"
-                      dataType="i4"
-                      name="book_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[member_id]"
-                      dataType="i4"
-                      name="member_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[date_issued]"
-                      dataType="dbDate"
-                      name="date_issued" />
-                    <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].ExternalColumns[date_returned]"
-                      dataType="dbDate"
-                      name="date_returned" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[book_id]"
-                      dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[book_id]"
-                      name="book_id" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[member_id]"
-                      dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[member_id]"
-                      name="member_id" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[date_issued]"
-                      dataType="dbDate"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[date_issued]"
-                      name="date_issued" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[date_returned]"
-                      dataType="dbDate"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[date_returned]"
-                      name="date_returned" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load Fact Fees Table\FactFees Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -347,31 +169,31 @@
                       cachedDataType="i4"
                       cachedName="id"
                       externalMetadataColumnId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[id]" />
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[id]" />
                     <inputColumn
                       refId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].Columns[book_id]"
                       cachedDataType="i4"
                       cachedName="book_id"
                       externalMetadataColumnId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].ExternalColumns[book_id]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[book_id]" />
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[book_id]" />
                     <inputColumn
                       refId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].Columns[member_id]"
                       cachedDataType="i4"
                       cachedName="member_id"
                       externalMetadataColumnId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].ExternalColumns[member_id]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[member_id]" />
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[member_id]" />
                     <inputColumn
                       refId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].Columns[date_issued]"
                       cachedDataType="dbDate"
                       cachedName="date_issued"
                       externalMetadataColumnId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_issued]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[date_issued]" />
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[date_issued]" />
                     <inputColumn
                       refId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].Columns[date_returned]"
                       cachedDataType="dbDate"
                       cachedName="date_returned"
                       externalMetadataColumnId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_returned]"
-                      lineageId="Package\Load Fact Fees Table\BooksIssued Source.Outputs[OLE DB Source Output].Columns[date_returned]" />
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[date_returned]" />
                     <inputColumn
                       refId="Package\Load Fact Fees Table\FactFees Destination.Inputs[OLE DB Destination Input].Columns[days_overdue]"
                       cachedDataType="i4"
@@ -448,11 +270,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Fact Fees Table\Overdue Source"
+              refId="Package\Load Fact Fees Table\Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Overdue Source"
+              name="Source"
               usesDispositions="true"
               version="7">
               <properties>
@@ -463,7 +285,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[tbl_Overdue]</property>
+                  name="OpenRowset">[dbo].[tbl_BooksIssued]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -497,7 +319,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Fact Fees Table\Overdue Source.Connections[OleDbConnection]"
+                  refId="Package\Load Fact Fees Table\Source.Connections[OleDbConnection]"
                   connectionManagerID="{FD1CB238-4F71-4BFC-9009-A075D361FB75}:external"
                   connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
@@ -505,107 +327,119 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[id]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[id]"
+                      externalMetadataColumnId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[id]"
                       name="id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[member_id]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[book_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[member_id]"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[member_id]"
+                      externalMetadataColumnId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[book_id]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[book_id]"
+                      name="book_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[member_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[member_id]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[member_id]"
                       name="member_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[days_overdue]"
-                      dataType="i4"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[date_issued]"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[days_overdue]"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[days_overdue]"
-                      name="days_overdue"
+                      externalMetadataColumnId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[date_issued]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[date_issued]"
+                      name="date_issued"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[total_charge]"
-                      dataType="numeric"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[date_returned]"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[total_charge]"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].Columns[total_charge]"
-                      name="total_charge"
-                      precision="10"
-                      scale="2"
+                      externalMetadataColumnId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[date_returned]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].Columns[date_returned]"
+                      name="date_returned"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[member_id]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[book_id]"
+                      dataType="i4"
+                      name="book_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[member_id]"
                       dataType="i4"
                       name="member_id" />
                     <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[days_overdue]"
-                      dataType="i4"
-                      name="days_overdue" />
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[date_issued]"
+                      dataType="dbDate"
+                      name="date_issued" />
                     <externalMetadataColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Output].ExternalColumns[total_charge]"
-                      dataType="numeric"
-                      name="total_charge"
-                      precision="10"
-                      scale="2" />
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Output].ExternalColumns[date_returned]"
+                      dataType="dbDate"
+                      name="date_returned" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[id]"
                       dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[id]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[id]"
                       name="id" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[member_id]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[book_id]"
                       dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[member_id]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[book_id]"
+                      name="book_id" />
+                    <outputColumn
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[member_id]"
+                      dataType="i4"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[member_id]"
                       name="member_id" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[days_overdue]"
-                      dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[days_overdue]"
-                      name="days_overdue" />
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[date_issued]"
+                      dataType="dbDate"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[date_issued]"
+                      name="date_issued" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[total_charge]"
-                      dataType="numeric"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[total_charge]"
-                      name="total_charge"
-                      precision="10"
-                      scale="2" />
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[date_returned]"
+                      dataType="dbDate"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[date_returned]"
+                      name="date_returned" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Fact Fees Table\Overdue Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Fact Fees Table\Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -643,22 +477,18 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="173,42"
-          Id="Package\Load Fact Fees Table\BooksIssued Source"
-          TopLeft="90,11" />
+          Size="111,42"
+          Id="Package\Load Fact Fees Table\Source"
+          TopLeft="265,31" />
         <NodeLayout
           Size="176,42"
           Id="Package\Load Fact Fees Table\FactFees Destination"
           TopLeft="258,354" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Load Fact Fees Table\Overdue Source"
-          TopLeft="434,20" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Fact Fees Table\BooksIssued Source">
+    design-time-name="Package\Load Fact Fees Table\Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -672,19 +502,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Fact Fees Table\FactFees Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Fact Fees Table\Overdue Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
