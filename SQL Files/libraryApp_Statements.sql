@@ -21,3 +21,5 @@ select cte_MemberId,
 	(cte_DaysIssued - cte_Membershiplength) * .30
 	from cte_DaysIssued;
 
+-- Write Statement for Loading appropriate results set for FactFees Table
+-- Add a column to tbl_Overdue that references the tbl_BooksIssued id.

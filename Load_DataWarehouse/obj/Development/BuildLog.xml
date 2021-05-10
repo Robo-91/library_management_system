@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Load_DataWarehouse</Name>
-    <LastWriteTime>2021-05-06T18:49:33.1687343Z</LastWriteTime>
+    <LastWriteTime>2021-05-10T20:13:59.7667977Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -34,6 +34,16 @@
     <ProjectBuildItemInfo>
       <Name>FactRatingsIncrementalLoading_pkg.dtsx</Name>
       <LastWriteTime>2021-05-06T20:00:00.1890225Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FactFeesInitialLoading_pkg.dtsx</Name>
+      <LastWriteTime>2021-05-10T20:15:15.7475557Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FactFeesIncrementalLoading_pkg.dtsx</Name>
+      <LastWriteTime>2021-05-10T19:59:16.0256668Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
