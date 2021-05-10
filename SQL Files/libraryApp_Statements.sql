@@ -23,3 +23,5 @@ select cte_MemberId,
 
 -- Write Statement for Loading appropriate results set for FactFees Table
 -- Add a column to tbl_Overdue that references the tbl_BooksIssued id.
+-- The id is already in the cte
+-- From there, you can write a statement for tbl_booksissued left join tbl_overdue
