@@ -141,6 +141,13 @@
             "dataType": "int64",
             "sourceColumn": "membership_id",
             "sourceProviderType": "Integer"
+          },
+          {
+            "type": "calculated",
+            "name": "Full name",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": " CONCATENATE(DimMember[first_name],CONCATENATE(\" \",DimMember[last_name]))"
           }
         ],
         "partitions": [
@@ -276,6 +283,16 @@
             }
           }
         ],
+        "measures": [
+          {
+            "name": "Total Days Overdue",
+            "expression": " SUM(FactFees[days_overdue])"
+          },
+          {
+            "name": "Total Charges",
+            "expression": " SUM(FactFees[total_charge])"
+          }
+        ],
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
@@ -340,6 +357,20 @@
               "query": " SELECT [dbo].[FactRatings].* FROM [dbo].[FactRatings] ",
               "dataSource": "ConnectionToServer"
             }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Average Rating",
+            "expression": " AVERAGE(FactRatings[average_rating])"
+          },
+          {
+            "name": "Total Ratings",
+            "expression": " SUM(FactRatings[ratings_count])"
+          },
+          {
+            "name": "Total Text Reviews",
+            "expression": " SUM(FactRatings[text_reviews_count])"
           }
         ],
         "annotations": [
