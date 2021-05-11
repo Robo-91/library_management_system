@@ -1,18 +1,18 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/10/2021 2:58:37 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-9TKNNVCM"
   DTS:CreatorName="LAPTOP-9TKNNVCM\r91pa"
-  DTS:DTSID="{B1069F07-C642-4214-9030-595F3C262A2B}"
+  DTS:DTSID="{AE620C13-63D3-4D8B-B305-73CE5CEA08E9}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="FactFeesInitialLoading_pkg"
+  DTS:ObjectName="FactFees_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{A629015C-0732-4B72-AC5E-9CFD6E52CF8D}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{6C09662E-0386-49FA-B832-45EC861CE04C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
