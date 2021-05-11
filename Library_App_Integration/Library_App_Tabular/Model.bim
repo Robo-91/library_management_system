@@ -148,6 +148,13 @@
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": " CONCATENATE(DimMember[first_name],CONCATENATE(\" \",DimMember[last_name]))"
+          },
+          {
+            "type": "calculated",
+            "name": "Full Name 1",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": " CONCATENATE(DimMember[first_name],CONCATENATE(\" \",DimMember[last_name]))"
           }
         ],
         "partitions": [
@@ -286,7 +293,7 @@
         "measures": [
           {
             "name": "Total Days Overdue",
-            "expression": " SUM(FactFees[days_overdue])"
+            "expression": " sum(FactFees[days_overdue])"
           },
           {
             "name": "Total Charges",
@@ -463,6 +470,9 @@
               },
               {
                 "name": "membership_id"
+              },
+              {
+                "name": "Full name"
               }
             ]
           },
@@ -486,6 +496,14 @@
               {
                 "name": "total_charge"
               }
+            ],
+            "measures": [
+              {
+                "name": "Total Days Overdue"
+              },
+              {
+                "name": "Total Charges"
+              }
             ]
           },
           {
@@ -499,6 +517,17 @@
               },
               {
                 "name": "text_reviews_count"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Average Rating"
+              },
+              {
+                "name": "Total Ratings"
+              },
+              {
+                "name": "Total Text Reviews"
               }
             ]
           }
