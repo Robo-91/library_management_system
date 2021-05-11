@@ -22,4 +22,15 @@ select cte_BooksIssuedId,
 	(cte_DaysIssued - cte_Membershiplength) * .30
 	from cte_DaysIssued;
 
-
+-- Statement to use in SSIS
+select	tbl_BooksIssued.id as [ID],
+		book_id as [Book ID],
+		tbl_BooksIssued.member_id as [Member ID],
+		date_issued as [Date Issued],
+		date_returned as [Date Returned],
+		days_overdue as [Days Overdue],
+		total_charge as [Total Charge]
+	from tbl_BooksIssued
+	left join tbl_Overdue on
+	tbl_BooksIssued.id = tbl_Overdue.issued_id;
+GO
