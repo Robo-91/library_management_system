@@ -7,6 +7,8 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Library_App_Integration", "
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Load_DataWarehouse", "..\Load_DataWarehouse\Load_DataWarehouse.dtproj", "{7F2E8532-AC7C-4037-8D45-6601E5DEB39B}"
 EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "Library_App_Tabular", "Library_App_Tabular\Library_App_Tabular.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|x86 = Development|x86
@@ -16,6 +18,9 @@ Global
 		{7975924D-6E57-4BB6-8C39-ED30D2FD80E3}.Development|x86.Build.0 = Development
 		{7F2E8532-AC7C-4037-8D45-6601E5DEB39B}.Development|x86.ActiveCfg = Development
 		{7F2E8532-AC7C-4037-8D45-6601E5DEB39B}.Development|x86.Build.0 = Development
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
