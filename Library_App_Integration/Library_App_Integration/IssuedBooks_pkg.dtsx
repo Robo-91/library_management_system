@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="IssuedBooks_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{B18F755B-5691-411E-924E-AF9B738B08E9}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{C027F04C-5A0D-446C-A632-9C12E3B3905F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1675,7 +1675,9 @@ where [refTable].[id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

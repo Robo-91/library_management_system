@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Authors_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{F8B6216D-C01B-44A4-918A-640B5CCAD614}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{31110514-CFA7-4FDD-AE92-4D37094A528B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -64,12 +64,11 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Author Task\Author Source.Outputs[Flat File Source Output].Columns[authors]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Author Task\Author Source.Outputs[Flat File Source Output].ExternalColumns[authors]"
-                      length="255"
+                      length="4000"
                       lineageId="Package\Author Task\Author Source.Outputs[Flat File Source Output].Columns[authors]"
                       name="authors"
                       truncationRowDisposition="IgnoreFailure">
@@ -207,11 +206,11 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">65001</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
+                  name="AlwaysUseDefaultCodePage">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
@@ -252,9 +251,8 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Author Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[authors]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
                       cachedName="authors"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Author Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[author_name]"
@@ -268,9 +266,8 @@
                       name="id" />
                     <externalMetadataColumn
                       refId="Package\Author Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[author_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="wstr"
+                      length="4000"
                       name="author_name" />
                   </externalMetadataColumns>
                 </input>
@@ -352,7 +349,7 @@ where [refTable].[author_name] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="author_name" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="author_name" dataType="DT_WSTR" length="4000" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -382,9 +379,8 @@ where [refTable].[author_name] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Author Task\Only Insert Unique Values.Inputs[Lookup Input].Columns[authors]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
                       cachedName="authors"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Author Task\Remove Duplicates and Sort.Outputs[Sort Output].Columns[authors]">
@@ -469,9 +465,8 @@ where [refTable].[author_name] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Author Task\Remove Duplicates and Sort.Inputs[Sort Input].Columns[authors]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
                       cachedName="authors"
                       lineageId="Package\Author Task\Author Source.Outputs[Flat File Source Output].Columns[authors]">
                       <properties>
@@ -497,9 +492,8 @@ where [refTable].[author_name] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Author Task\Remove Duplicates and Sort.Outputs[Sort Output].Columns[authors]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="wstr"
+                      length="4000"
                       lineageId="Package\Author Task\Remove Duplicates and Sort.Outputs[Sort Output].Columns[authors]"
                       name="authors"
                       sortKeyPosition="1">
@@ -563,51 +557,21 @@ where [refTable].[author_name] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="146,42"
-          Id="Package\Author Task\Author Source"
-          TopLeft="189,51" />
-        <NodeLayout
           Size="212,42"
           Id="Package\Author Task\Remove Duplicates and Sort"
           TopLeft="170,163" />
-        <EdgeLayout
-          Id="Package\Author Task.Paths[Flat File Source Output]"
-          TopLeft="262,93">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="14,70"
-              Start="0,0"
-              End="14,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31"
-                    Point2="0,35"
-                    Point3="4,35" />
-                  <mssgle:LineSegment
-                    End="10,35" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10,35"
-                    Point2="14,35"
-                    Point3="14,39" />
-                  <mssgle:LineSegment
-                    End="14,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Author Task\OLE DB Destination"
+          TopLeft="182,362" />
         <NodeLayout
           Size="202,42"
           Id="Package\Author Task\Only Insert Unique Values"
           TopLeft="188,269" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Author Task\Author Source"
+          TopLeft="189,51" />
         <EdgeLayout
           Id="Package\Author Task.Paths[Sort Output]"
           TopLeft="276,205">
@@ -642,10 +606,6 @@ where [refTable].[author_name] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Author Task\OLE DB Destination"
-          TopLeft="182,362" />
         <EdgeLayout
           Id="Package\Author Task.Paths[Lookup No Match Output]"
           TopLeft="289,311">
@@ -682,32 +642,43 @@ where [refTable].[author_name] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Author Task.Paths[Flat File Source Output]"
+          TopLeft="262,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14,70"
+              Start="0,0"
+              End="14,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="10,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10,35"
+                    Point2="14,35"
+                    Point3="14,39" />
+                  <mssgle:LineSegment
+                    End="14,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Author Task\Only Insert Unique Values">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[tbl_Authors]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Author Task\OLE DB Destination">
     <Properties>
@@ -718,6 +689,29 @@ where [refTable].[author_name] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Author Task\Only Insert Unique Values">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_Authors]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

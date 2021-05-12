@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-9TKNNVCM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAAD0Dq+6rVXMOS++st8NWlF7F8Xw6Q14HHSf0ZwkYpCnBwAAAAAOgAAAAAIAACAAAAAlNOb6xs8JHlaZ6g2WVKm2oez1GURdSkAsll2d+mE6YpAAAAA/Y0o0EF91ytDCAI6NmTHmQhsR/xgQ3eLYs1mGRqKeeJuD8yVlTUr3VUNnzA0mc66vWVh5TqH0hLLNj4JD6nDQd/9ho33GOY7bl641DkL3ghoTlEjZJN7kdwu10jWLyjV5163R/mm9PRBKhJMFKZ/0NBxwRN/tCErWZG781rhebPdI5JqFeF99dHbxXmsL8iJAAAAAU/+0f0Mpqa6zjZ419G2TOz+pLCf6VSxhrBZAqoPJrKPx/j5SJRbjdRukIUfoZAPL78TfSGjVaB2YNTr6tVPt3g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAABsz8hVy9ARoCdyXQPUZsf3A7Z1LE0SBax7asbCxKJsTwAAAAAOgAAAAAIAACAAAAB6YLHJPg49CdRB/lsVGz8J/kvzv6J5y9/C1DbdnaV5vZAAAABlG/ftlyb1OXrpF7ckK7ocOQfVPXUcOeYP0nOCHbdkE6k8Hdko0o2xC8zk0UbqB+0QnL5Uba6PJh/uJHmgtQGoc1mLRqu9qAt02+jX4zHXJJkJteU9eHgpWJ93S1zP9IZC1h6NDCWKMuyEddMMzhN0Lz3dALgjhcJS/7b7h2m5trjUSnUK8xp3Ndc8YHGhlHtAAAAAnN9vLRAtMMPWo/XIpMwi14ywTYMgWznhpS5nkj1lU31Aymas7s2cismVQ4Kwrh7gJCg1HX0gZnPY+nmFCVaf0Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -69,7 +69,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">65001</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -129,7 +129,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">22801</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -383,10 +383,10 @@
                 <SSIS:Property SSIS:Name="Name">Authors_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{F8B6216D-C01B-44A4-918A-640B5CCAD614}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{31110514-CFA7-4FDD-AE92-4D37094A528B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -400,10 +400,10 @@
                 <SSIS:Property SSIS:Name="Name">Books_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">31</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">36</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{36302083-41C5-4243-9930-FD348065A3AC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{893DE832-308B-4B32-B75A-0FE3DAE8DDF1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -572,6 +572,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -785,6 +787,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -958,10 +962,10 @@
                 <SSIS:Property SSIS:Name="Name">IssuedBooks_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B18F755B-5691-411E-924E-AF9B738B08E9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C027F04C-5A0D-446C-A632-9C12E3B3905F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1262,6 +1266,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1457,6 +1463,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1652,6 +1660,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
