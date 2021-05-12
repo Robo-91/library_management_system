@@ -36,3 +36,8 @@ select	tbl_BooksIssued.id as [ID],
 GO
 
 -- Data Cleaning
+-- Remove trailing , from publisher
+select distinct right(publisher,1) from tbl_Books
+
+update tbl_Books
+set publisher = REPLACE(publisher,right(publisher,1),'') from tbl_Books
