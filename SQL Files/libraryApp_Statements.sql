@@ -34,3 +34,5 @@ select	tbl_BooksIssued.id as [ID],
 	left join tbl_Overdue on
 	tbl_BooksIssued.id = tbl_Overdue.issued_id;
 GO
+
+-- Data Cleaning

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:ObjectName="Book_Dataset Connection"
   DTS:DTSID="{AEF4EA2D-F3D8-41CE-8F3D-E14E411E5D50}"
