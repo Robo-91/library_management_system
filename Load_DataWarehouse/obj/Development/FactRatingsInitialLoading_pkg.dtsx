@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactRatingsInitialLoading_pkg"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{24BE7DB8-8238-46A5-89D0-594607F950E6}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{90209EEB-A701-483B-BE6B-CBDE1EABDE56}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -248,12 +248,11 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].Columns[title]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].ExternalColumns[title]"
-                      length="255"
+                      length="4000"
                       lineageId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].Columns[title]"
                       name="title"
                       truncationRowDisposition="FailComponent" />
@@ -304,9 +303,8 @@
                       name="id" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].ExternalColumns[title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="wstr"
+                      length="4000"
                       name="title" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].ExternalColumns[author_id]"
@@ -348,9 +346,8 @@
                       name="publication_date" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].ExternalColumns[publisher]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="wstr"
+                      length="4000"
                       name="publisher" />
                   </externalMetadataColumns>
                 </output>
@@ -378,9 +375,8 @@
                       name="id" />
                     <outputColumn
                       refId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Error Output].Columns[title]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="wstr"
+                      length="4000"
                       lineageId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Error Output].Columns[title]"
                       name="title" />
                     <outputColumn
@@ -454,9 +450,8 @@
                       lineageId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].Columns[id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[title]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
                       cachedName="title"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[title]"
                       lineageId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].Columns[title]" />
@@ -603,9 +598,8 @@ where [refTable].[title] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[title]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
                       cachedName="title"
                       lineageId="Package\Data Flow Task\Book Source.Outputs[OLE DB Source Output].Columns[title]">
                       <properties>

@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Load_DataWarehouse</Name>
-    <LastWriteTime>2021-05-10T20:13:59.7667977Z</LastWriteTime>
+    <LastWriteTime>2021-05-11T20:48:22.4799209Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimAuthor_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-05T19:12:11.1141339Z</LastWriteTime>
+      <LastWriteTime>2021-05-13T19:11:53.6747452Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimBook_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-05T19:17:44.2232818Z</LastWriteTime>
+      <LastWriteTime>2021-05-13T19:14:16.8599227Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactRatingsInitialLoading_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-06T19:51:58.2545903Z</LastWriteTime>
+      <LastWriteTime>2021-05-13T19:15:02.5278399Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -37,13 +37,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>FactFeesInitialLoading_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-11T20:45:59.2129752Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>FactFeesIncrementalLoading_pkg.dtsx</Name>
-      <LastWriteTime>2021-05-10T19:59:16.0256668Z</LastWriteTime>
+      <Name>FactFees_pkg.dtsx</Name>
+      <LastWriteTime>2021-05-11T20:48:22.4268849Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-9TKNNVCM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAADznweNT0YnPy6YDivFRtzaZTdr7/N1qyaCvrKH/jklYgAAAAAOgAAAAAIAACAAAABMZJEXtOSMKh9SrEKEV05Cm37FwbbT979EgHHxtLM/1JAAAAAQMeJmFgKexbbjxQYS/DQiNhCjuMSeQQuruf27peetLdCEWdygihoBWk6MD/EGBPtCwXuojPs2gg1WnUp6/x3wVOe7yno7h+TJmZezI1MqGt9u256zeC99WLLThAVZAjsw7n6Mh9r6fMSJ0fZZkVbz1N5oxbDK1MTwfhw65Cw0FyLrRzsrlt6Nhuq7ich0EYdAAAAASqkO7ZVUEjcXZiqqI7sLt5+qJ9iZE456NSKptWVjpuLuBfNOwO55E8MDqf6jPE7uAlEwpkylcqW0IApjKLCjrA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAAA3pUgqMIa0z+4aMV8OS6lEdSpB7q1WHnLveTye6gzsKQAAAAAOgAAAAAIAACAAAABM2RfyRBc0dgTVN5FbL7oOSQs0UkUMCE3lWq9vM4YoFpAAAABgYvOxg/MDWeleqkFg8IQ+NIUbWDdUjpsaNRT3uIGqiU9oRGbOMszCmz9NXF0MT5MPkh50VOCeEynWnT//z2/ntJoscIFY4M06r02RwHPtWmmybhF8MhbZKO0T0CgXkITnDwJ/Uuq6vWMDXaVsiBFmi5GibP/nL2I04DPiMBf1sbka40z+WDhonq8/QQpOEh5AAAAAkBhQ9kXKikXFBeltYQ42sOXnap1Jm1agFhQLbSrFzy/wtBafUEDHsYiamfzZskVECccufnk9SqduWNsqefJhmw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -36,8 +36,7 @@
           <SSIS:Package SSIS:Name="DimMember_pkg.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactRatingsInitialLoading_pkg.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactRatingsIncrementalLoading_pkg.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="FactFeesInitialLoading_pkg.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="FactFeesIncrementalLoading_pkg.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="FactFees_pkg.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SourceConnection.conmgr" />
@@ -289,10 +288,10 @@
                 <SSIS:Property SSIS:Name="Name">DimAuthor_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D3E7DE2E-685E-4224-8906-E7F5884F0C80}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4F76D3D7-3854-4278-BCFF-3979F8CD89DA}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -306,10 +305,10 @@
                 <SSIS:Property SSIS:Name="Name">DimBook_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C2F20ACD-2E50-4EBE-A439-84305D99A04E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{ABA4056A-37C9-4449-9E9D-62A42FFEED71}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -357,10 +356,10 @@
                 <SSIS:Property SSIS:Name="Name">FactRatingsInitialLoading_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">28</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">32</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{2315F86B-935B-423A-AD5A-16266E4AABA3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{90209EEB-A701-483B-BE6B-CBDE1EABDE56}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -647,6 +646,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -818,16 +819,16 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="FactFeesInitialLoading_pkg.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="FactFees_pkg.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{B1069F07-C642-4214-9030-595F3C262A2B}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">FactFeesInitialLoading_pkg</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{AE620C13-63D3-4D8B-B305-73CE5CEA08E9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">FactFees_pkg</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">39</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">40</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A629015C-0732-4B72-AC5E-9CFD6E52CF8D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6C09662E-0386-49FA-B832-45EC861CE04C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -996,8 +997,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1032,23 +1031,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="FactFeesIncrementalLoading_pkg.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{F777B29D-6C21-47B4-BB3F-DF8EF2E241D2}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">FactFeesIncrementalLoading_pkg</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6B0E06C7-A74A-43F6-84EE-D9BC9955D37C}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
