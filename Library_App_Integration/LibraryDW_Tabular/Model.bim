@@ -144,7 +144,7 @@
           },
           {
             "type": "calculated",
-            "name": "Full name",
+            "name": "Full Name",
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": " CONCATENATE(DimMember[first_name],CONCATENATE(\" \",DimMember[last_name]))"
@@ -283,6 +283,16 @@
             }
           }
         ],
+        "measures": [
+          {
+            "name": "Total Overdue Days",
+            "expression": " SUM((FactFees[days_overdue]))"
+          },
+          {
+            "name": "Sum of Charges",
+            "expression": " SUM(FactFees[total_charge])"
+          }
+        ],
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
@@ -400,6 +410,96 @@
         "fromColumn": "book_id",
         "toTable": "DimBook",
         "toColumn": "id"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "New Perspective",
+        "tables": [
+          {
+            "name": "DimAuthor",
+            "columns": [
+              {
+                "name": "author_name"
+              }
+            ]
+          },
+          {
+            "name": "DimBook",
+            "columns": [
+              {
+                "name": "publication_date"
+              },
+              {
+                "name": "publisher"
+              },
+              {
+                "name": "title"
+              }
+            ]
+          },
+          {
+            "name": "DimMember",
+            "columns": [
+              {
+                "name": "first_name"
+              },
+              {
+                "name": "last_name"
+              },
+              {
+                "name": "Full Name"
+              }
+            ]
+          },
+          {
+            "name": "DimMembership",
+            "columns": [
+              {
+                "name": "member_type"
+              }
+            ]
+          },
+          {
+            "name": "FactFees",
+            "columns": [
+              {
+                "name": "date_issued"
+              },
+              {
+                "name": "date_returned"
+              },
+              {
+                "name": "days_overdue"
+              },
+              {
+                "name": "total_charge"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Total Overdue Days"
+              },
+              {
+                "name": "Sum of Charges"
+              }
+            ]
+          },
+          {
+            "name": "FactRatings",
+            "columns": [
+              {
+                "name": "average_rating"
+              },
+              {
+                "name": "ratings_count"
+              },
+              {
+                "name": "text_reviews_count"
+              }
+            ]
+          }
+        ]
       }
     ],
     "annotations": [
