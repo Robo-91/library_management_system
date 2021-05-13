@@ -1,0 +1,7 @@
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\bin\Model.asdatabase
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\bin\Model.deploymenttargets
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\bin\Model.deploymentoptions
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\obj\Development\LibraryDW_Tabular.smproj.CoreCompileInputs.cache
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\obj\Development\Model.asdatabase
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\obj\Development\Model.deploymentoptions
+C:\Users\r91pa\Desktop\library_management_system\Library_App_Integration\LibraryDW_Tabular\obj\Development\Model.deploymenttargets

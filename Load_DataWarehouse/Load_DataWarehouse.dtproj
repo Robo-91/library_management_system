@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-9TKNNVCM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAABpFaBkj+wUUS67WBEeJ+BRIjvToDzKHqIPUBlPZflNMgAAAAAOgAAAAAIAACAAAABNUcUtCWr3fMeBB62BmDG0aUhta5bJANL2BJ120QiIRZAAAACBGbKJR6+nA8vawCibbJ3VmFVLYMxN9TCApNpDb789W8oWGu9TajLtl9Hl+isGVm1nPTCs9jzI5WY7Khz4y2HYQ0utBUd8tIOBVoVbPKNOabDZr+cDQq4Fa1Ytw/2PuPR1+DbDnfaR2WAeo9UrOoD7PBHTBLU5BffVdx6E8pFcxnG0CC9tBbZ3go57eDH2K7NAAAAAaAVJ/5ybmz2PHX5wGE2B41+5jOmI9wlGwi9XcEbrsdb71metOijFqD1rAwYh/Nn01wh0ELQWpZzSleaRfuGaVg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjo8nbYFS80amQpe5NM0VgAAAAAACAAAAAAAQZgAAAAEAACAAAABxBKYPMDmQ/N5WjEkit1mgrjX3rcnb25W1q59qwJoN4wAAAAAOgAAAAAIAACAAAAC+f1rNkSs/VY/bZq3kTEsHN3McVzoiEzBvHnTMXcK2qZAAAABj49xlA9zys3kCoxGntkk5XkFfcG1w5B1TeJmYlYG9KZzrDrDT45HZ87fbHjxRUt44SxTC8L4TD+cpFU0fKdudzy+GouT2ephTVaOAtRgkldHcC5LoZQ81F7qaFOV9dmjpGCmFkEaKN3vZEAZsfvqLg7F/P7AwORHUhpoR4fgKhcVjtkWKOeYyfRjqBQPR9j5AAAAAmi3OCTkn7qe5upR8O38Y0W+TwxBoHKGEy82tbu6bQL2bSPRToZ5vTSBnKuibkq0BzLyNWPJBSpmHJO0ogKChIw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -37,7 +37,6 @@
           <SSIS:Package SSIS:Name="FactRatingsInitialLoading_pkg.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactRatingsIncrementalLoading_pkg.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactFees_pkg.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="ProcessLibraryDW.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SourceConnection.conmgr" />
@@ -1032,23 +1031,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="ProcessLibraryDW.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{2DB363BD-B474-4E63-8EC6-C0C1A4ADC39C}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">ProcessLibraryDW</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4DC00DA6-8C22-4C8B-8267-6F3AFF4DAE24}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
