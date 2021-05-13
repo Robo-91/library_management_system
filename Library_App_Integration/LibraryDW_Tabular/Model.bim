@@ -359,6 +359,20 @@
             }
           }
         ],
+        "measures": [
+          {
+            "name": "Average Rating",
+            "expression": " AVERAGE(FactRatings[average_rating])"
+          },
+          {
+            "name": "Total Ratings",
+            "expression": " SUM(FactRatings[ratings_count])"
+          },
+          {
+            "name": "Total Text Reviews",
+            "expression": " sum(FactRatings[text_reviews_count])"
+          }
+        ],
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
@@ -496,6 +510,17 @@
               },
               {
                 "name": "text_reviews_count"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Average Rating"
+              },
+              {
+                "name": "Total Ratings"
+              },
+              {
+                "name": "Total Text Reviews"
               }
             ]
           }
