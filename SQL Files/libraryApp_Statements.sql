@@ -41,6 +41,7 @@ select distinct right(publisher,1) from tbl_Books
 
 update tbl_Books
 set publisher = REPLACE(publisher,right(publisher,1),'') from tbl_Books
+GO
 
 -- Analytics
 -- Conversion Rate of Members who returned books on time / Overdue
@@ -66,3 +67,13 @@ select
 		cast(count(distinct case when cte_OverdueDays = 0 then cte_Id else NULL end)
 			/cast(count(distinct case when cte_OverdueDays > 0 then cte_Id else NULL end) as decimal(10,2)) as decimal(5,4)) as [Conversion Rate]
 	from cte_DaysIssued
+GO
+
+-- Issues by month for the year 2019
+select 
+		DATENAME(MONTH,date_issued) as [Month],
+		count(id) as [Total Issues]
+	from tbl_BooksIssued
+			where year(date_issued) = 2019
+		group by DATENAME(month,date_issued),month(date_issued)
+GO
