@@ -44,7 +44,7 @@ set publisher = REPLACE(publisher,right(publisher,1),'') from tbl_Books
 GO
 
 -- Analytics
--- Conversion Rate of Members who returned books on time / Overdue
+-- Conversion Rate of total issues / Overdue
 with cte_DaysIssued(cte_Id,cte_MemberId,cte_DaysIssued,cte_Membershiplength,cte_OverdueDays)
 as
 (
@@ -65,7 +65,7 @@ select
 		count(distinct case when cte_OverdueDays > 0 then cte_Id else NULL end) as [Books Returned On Time],
 		count(distinct case when cte_OverdueDays = 0 then cte_Id else NULL end) as [Books Overdue],
 		cast(count(distinct case when cte_OverdueDays = 0 then cte_Id else NULL end)
-			/cast(count(distinct case when cte_OverdueDays > 0 then cte_Id else NULL end) as decimal(10,2)) as decimal(5,4)) as [Conversion Rate]
+			/cast(count(distinct cte_Id)as decimal(10,2)) as decimal(5,4)) as [Conversion Rate]
 	from cte_DaysIssued
 GO
 
