@@ -41,3 +41,28 @@ select distinct right(publisher,1) from tbl_Books
 
 update tbl_Books
 set publisher = REPLACE(publisher,right(publisher,1),'') from tbl_Books
+
+-- Analytics
+-- Conversion Rate of Members who returned books on time / Overdue
+with cte_DaysIssued(cte_Id,cte_MemberId,cte_DaysIssued,cte_Membershiplength,cte_OverdueDays)
+as
+(
+	select tbl_BooksIssued.id as [ID],
+	tbl_BooksIssued.member_id as [Member ID],
+	DATEDIFF(day,date_issued,date_returned) as [Days Issued],
+	day_length as [Membership Length],
+	case when DATEDIFF(day,date_issued,date_returned) - day_length < 0 then 0
+		 else DATEDIFF(day,date_issued,date_returned) - day_length end as [Days Overdue]
+		from tbl_BooksIssued
+		join tbl_Members on
+		tbl_BooksIssued.member_id = tbl_Members.id
+		join tbl_MembershipType on
+		tbl_Members.membership_id = tbl_MembershipType.id
+)
+
+select
+		count(distinct case when cte_OverdueDays > 0 then cte_Id else NULL end) as [Books Returned On Time],
+		count(distinct case when cte_OverdueDays = 0 then cte_Id else NULL end) as [Books Overdue],
+		cast(count(distinct case when cte_OverdueDays = 0 then cte_Id else NULL end)
+			/cast(count(distinct case when cte_OverdueDays > 0 then cte_Id else NULL end) as decimal(10,2)) as decimal(5,4)) as [Conversion Rate]
+	from cte_DaysIssued
