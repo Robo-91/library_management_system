@@ -46,7 +46,7 @@ To-do list:
 https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-ver15
 >An example would be: C:\Program Files\Microsoft SQL Server\MSSQL13.servername\MSSQL\Backup
 
-*From the same Database Backups folder, locate the LibraryDW_Tabular.abf file and restore using the following steps:
+* From the same Database Backups folder, locate the LibraryDW_Tabular.abf file and restore using the following steps:
  https://docs.microsoft.com/en-us/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases?view=asallproducts-allversions
 >An example would be:  C:\Program Files\Microsoft SQL Server\MSAS13.servername\OLAP\Backup
 
