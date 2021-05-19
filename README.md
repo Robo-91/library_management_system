@@ -37,7 +37,8 @@ To-do list:
 > Visual Studio w/SSDT 2017.
 > At least one instance of Sql Server Management Studio 2016 w/ Integration Services and Analysis Services.
 > Power BI Desktop
- Using the command prompt, navigate to the directory that you want to clone your repository in, and use the following command:
+
+Using the command prompt, navigate to the directory that you want to clone your repository in, and use the following command:
 
 > git clone https://github.com/Robo-91/library_management_system.git
 
