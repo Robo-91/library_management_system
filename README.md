@@ -33,24 +33,24 @@ To-do list:
 
 ## Getting Started
    
- Ensure that you have the following services installed:
+* Ensure that you have the following services installed:
 > Visual Studio w/SSDT 2017.
 > At least one instance of Sql Server Management Studio 2016 w/ Integration Services and Analysis Services.
 > Power BI Desktop
 
-Using the command prompt, navigate to the directory that you want to clone your repository in, and use the following command:
+* Using the command prompt, navigate to the directory that you want to clone your repository in, and use the following command:
 
 > git clone https://github.com/Robo-91/library_management_system.git
 
-Locate the Library_App_DB and Library_App_DW bak files (Data Files -> Database Backups) and restore:
+* Locate the Library_App_DB and Library_App_DW bak files (Data Files -> Database Backups) and restore:
 https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-ver15
 >An example would be: C:\Program Files\Microsoft SQL Server\MSSQL13.servername\MSSQL\Backup
 
-From the same Database Backups folder, locate the LibraryDW_Tabular.abf file and restore using the following steps:
+*From the same Database Backups folder, locate the LibraryDW_Tabular.abf file and restore using the following steps:
  https://docs.microsoft.com/en-us/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases?view=asallproducts-allversions
 >An example would be:  C:\Program Files\Microsoft SQL Server\MSAS13.servername\OLAP\Backup
 
-Ensure that the .pbix file is connected to your analysis services.
+* Ensure that the .pbix file is connected to your analysis services.
 
 ## Usage
 
