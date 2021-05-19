@@ -25,10 +25,11 @@ List of features ready and TODOs for future development
 * Wrote Dax Expressions to created calculated columns and measures.
 
 To-do list:
-* Learn and implement more queries that provide insight for data analysis
-* Perform further data cleaning
-* Implement the tuning advisor further
+* Learn and implement more queries that provide insight for data analysis.
+* Perform further data cleaning.
+* Implement the tuning advisor further.
 * Possibly implement indexes.
+* Omit the member id column from overdue table.
 
 ## Getting Started
    
