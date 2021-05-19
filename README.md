@@ -33,18 +33,27 @@ To-do list:
 
 ## Getting Started
    
-(include git clone command)
-(include all environment setup steps)
+Ensure that you have the following services installed:
+* Visual Studio w/SSDT 2017.
+* At least one instance of Sql Server Management Studio 2016 w/ Integration Services and Analysis Services.
+* Power BI Desktop
+Using the command prompt, navigate to the directory that you want to clone your repository in, and use the following command:
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+> git clone https://github.com/Robo-91/library_management_system.git
 
-- All the `code` required to get started
-- Images of what it should look like
+Locate the Library_App_DB and Library_App_DW bak files (Data Files -> Database Backups) and restore:
+https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-ver15
+>An example would be: C:\Program Files\Microsoft SQL Server\MSSQL13.servername\MSSQL\Backup
+
+From the same Database Backups folder, locate the LibraryDW_Tabular.abf file and restore using the following steps:
+ https://docs.microsoft.com/en-us/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases?view=asallproducts-allversions
+>An example would be:  C:\Program Files\Microsoft SQL Server\MSAS13.servername\OLAP\Backup
+
+Ensure that the .pbix file is connected to your analysis services.
 
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+> Locate the reports (Library_Reports.pbix). You can interact with the visualizations by clicking on values. the visuals interact with other visuals on the page by filtering out values.
 
 ## License
 
