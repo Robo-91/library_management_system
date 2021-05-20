@@ -56,11 +56,6 @@ https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore
 
 > Locate the reports (Library_Reports.pbix). You can interact with the visualizations by clicking on values. the visuals interact with other visuals on the page by filtering out values.
 
-![Fees_Summary](https://user-images.githubusercontent.com/59587505/118867770-0f438880-b8a9-11eb-9978-389cf3ec5eb0.PNG)
-
-![Ratings_Summary](https://user-images.githubusercontent.com/59587505/118867825-1bc7e100-b8a9-11eb-9294-4c354e17e60f.PNG)
-
-
 ## License
 
 This project uses the following license: [GNU](https://www.gnu.org/licenses/gpl-3.0.en.html).
